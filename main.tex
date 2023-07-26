@@ -51,21 +51,20 @@
 \author[1]{Jordan Brown}
 \author[1,2]{Andrew Grose}
 \author[1]{Mark Gibberd}
-\author[1,3]{Julia Easton}
+\author[1]{Julia Easton}
 \author[1,2]{Suman Rakshit}
 
 
-\affil[1]{Curtin Biometry and Data Analytic, Centre for Crop and Disease Management, Curtin University, Perth, Australia}
+\affil[1]{Curtin Biometry and Agricultural Data Analytics, Centre for Crop and Disease Management, Curtin University, Perth, Australia}
 \affil[2]{School of Electrical Engineering, Computing and Mathematical Sciences, Curtin University, Perth, Australia}
-\affil[3]{Curtin 4 Agribusiness Profitability Initiative, Centre for Crop and Disease Management, Curtin University, Perth, Australia}
 
  
 \date{}							
 % Activate to display a given date or no date
 
 \linenumbers
-%\doublespacing
-\onehalfspacing
+\doublespacing
+%\onehalfspacing
 
 \begin{document}
 
@@ -80,21 +79,24 @@ Randomisation is a crucial aspect of agricultural experiments for both agronomis
 
 \section{Introduction}\label{Sec:Intro}
 
-The principles of randomisation were first expounded in 1925 by \textcite{Fisher1934Statistical}, who analysed a few systematically arranged experiments and pointed out that randomisation can provide valid tests of significance subject to appropriate restrictions, such as experimental units arranged in blocks or in rows and columns of a Latin square \parencite{Verdooren2020History}. The most straightforward, least restrictive experimental design is the completely randomised design (CRD). More complex designs, such as randomised complete block design (RCBD), split-plot design, strip-plot design and Latin square design, are also widely used in agricultural experiments \parencite{Petersen1994Agricultural}. Following these principles, randomised designs are routinely used from small on-site trials to large on-farm experiments (OFE), while systematic designs are rarely used.
+The principles of randomisation were first expounded in 1925 by \textcite{Fisher1934Statistical}, who analysed a few systematically arranged experiments and pointed out that randomisation can provide valid tests of significance subject to appropriate restrictions, such as experimental units arranged in blocks or in rows and columns of a Latin square \parencite{Verdooren2020History}. Traditionally, small-plot trials for agriculture are designed to accentuate treatment effects with the completely randomised design (CRD) as the most straight forward, least restrictive experimental design. More complex designs, such as a randomised complete block design (RCBD), a split-plot design, a strip-plot design and a Latin square design, are also widely used in agricultural experiments \parencite{Petersen1994Agricultural}. Following these principles, randomised designs are routinely used for on-farm strip trials, while systematic designs are rarely used.
 
 % Old concluding sentence: With the increase in complexity, randomised block design, split-plot design, strip-plot design and Latin square design are all widely used in agricultural experiments \parencite{Petersen1994Agricultural}. 
+
+
+
 
 OFE enables farmers the flexibility to implement large-scale experiments in order to test management practices on their farms \parencite{Evans2020Assessment}. The goal of OFE is to help farmers better understand uncertainties and leverage their existing strengths in managing translational and structural uncertainty \parencite{Cook2013Onfarm}. In the situation that the goal is to compare yield responses between management classes or to select individuals with the best performance as new market varieties, a randomised design is superior to a systematic design \parencite{Pringle2004FieldScale, Selle2019Flexible}. 
 
 %Like conventional agricultural experiments, 
-While randomisation is often considered a crucial prerequisite for obtaining valid statistical inferences \parencite{Piepho2013Why}, this is not always the case when the goal of on-farm experiments (OFE) shifts from the conventional analysis. In the application of precision agriculture (PA), a prescription map from the experimental results is required by the variable-rate applicators (VRA) prior to the start of the operation \parencite{Pringle2004FieldScale}. Therefore, in this scenario, the goal of OFE becomes obtaining a smooth map showing the optimal level of a controllable input, such as nitrogen rates, across a grid made of rows and columns covering the whole field. For this objective, \textcite{Piepho2011Statistical} stresses that only a single level of the treatments can be directly observed at any one point on the grid, and the response for other levels at the same grid must be interpolated. If a randomised design is conducted, the interpolation distances to locations with treatment levels of interest will vary across the field. Such heterogeneous distances increase the uncertainty in the analysis and reduce the efficiency of local prediction. As a result, a systematic design is preferable to a randomised design in this scenario. Unfortunately, this perspective has often been overlooked by researchers, leading to the widespread use of randomised designs.
+While randomisation is often considered a crucial prerequisite for obtaining valid statistical inferences \parencite{Piepho2013Why}, this is not always the case when the goal of on-farm experiments (OFE) shifts from the conventional analysis. In the application of precision agriculture (PA), the variable rate applicators (VRA) require a prescription map of the experiment before the start of the operation \parencite{Pringle2004FieldScale}. Therefore, in this scenario, the goal of OFE becomes obtaining a smooth map showing the optimal level of a controllable input, such as nitrogen rates, across a grid made of rows and columns covering the whole field. For this objective, \textcite{Piepho2011Statistical} stresses that only a single level of treatments can be directly observed at any one point on the grid and the response for other levels at the same grid must be interpolated. If a randomised design is conducted, the interpolation distances to locations with treatment levels of interest will vary throughout the field. Such heterogeneous distances increase the uncertainty in the analysis and reduce the efficiency of local prediction. As a result, a systematic design is preferable to a randomised design in this scenario. Unfortunately, this perspective has often been overlooked by researchers, leading to the widespread use of randomised designs.
 
 
-Analyzing a systematic design for the creation of an optimal treatment map for on-farm experiments (OFE) is statistically challenging. The truly localized estimation at each point on the grid is unknown, and the optimum treatment response varies continuously across the field. \textcite{Cao2022Bayesian} implemented a Bayesian approach using spatially correlated random parameters for large systematic OFE strip trials, assuming a quadratic response model with both global and local spatially varying components. However, the Bayesian approach is time-consuming and requires preliminary knowledge of Bayesian statistics for farmers and agronomists. Alternatively, \textcite{Rakshit2020Novel} adopt a local regression approach, called geographically weighted regression (GWR), to obtain spatially-varying estimates of treatment effects for OFE. Additionally, \textcite{Evans2020Assessment} conclude through simulation studies that GWR is a simple method for the analysis of OFE data and is able to accurately separate yield variation that is not due to the applied treatment from yield response due to treatment. However, their study was limited by the use of a randomised design and the assumption of a linear response to fertilizer treatment. \textcite{Alesso2021Design} simulated corn yield with four levels of nitrogen assigned systematically and randomly into chessboard designs and fitted the true coefficients using GWR. They concluded that systematic designs achieved the best results in most cases. However, in these simulation studies, the use of chessboard design presents a problem: harvesters can smooth over abrupt treatment changes between plots, potentially leading to misleading results unless there are constraints on the field \parencite{Pringle2004FieldScale}. Additionally, the quadratic or plateau feature was not considered as a factor in the simulations.
+Analysing a systematic design for the creation of an optimal treatment map for on-farm experiments (OFE) is a statistically challenging task. The truly localised estimation at each point on the grid is unknown, and the optimum treatment response varies continuously across the field. \textcite{Cao2022Bayesian} implemented a Bayesian approach using spatially correlated random parameters for large systematic OFE strip trials, assuming a quadratic response model with both global and local spatially varying components. However, the Bayesian approach is time-consuming and requires preliminary knowledge of Bayesian statistics for farmers and agronomists. Alternatively, \textcite{Rakshit2020Novel} adopt a local regression approach, called geographically weighted regression (GWR), to obtain spatially-varying estimates of treatment effects for OFE. Additionally, \textcite{Evans2020Assessment} conclude through simulation studies that GWR is a simple method for OFE data analysis and is capable of accurately separating yield variation that is not due to applied treatment from yield response due to treatment. However, their study was limited by the use of a randomised design and the assumption of a linear response to fertiliser treatment. \textcite{Alesso2021Design} simulated corn yield with four nitrogen levels assigned systematically and randomly in the chessboard designs and fitted the true coefficients using GWR. They concluded that systematic designs achieved the best results in most cases. However, in these simulation studies, the use of chessboard design presents a problem: harvesters can smooth over abrupt treatment changes between plots, potentially leading to misleading results unless there are constraints on the field \parencite{Pringle2004FieldScale}. Additionally, the quadratic or plateau feature was not considered a factor in the simulations.
 
 %The role of variable-rate applicators has a focus on the application of fertilizers or fungicides to target enable the most efficient yields. 
 
-\textcite{Piepho2018Tutorial} demonstrate an example that a linear model is lack fitting on the sugar beets data \parencite{Petersen1994Agricultural}. \textcite{Glynn2007} show that many curves exist beyond a linear trend for nutrient-response relationships. The curve depends on the current availability of other macro and micronutrients in the soil \parencite{Marschner2011}, meaning that a linear relationship is unlikely to be consistent across a large trial. For this reason, it is important to consider models with degrees higher than 1, with a quadratic model found to be adequate relationships (\textcite{Piepho2018Tutorial, Liben2019}). 
+\textcite{Piepho2018Tutorial} demonstrate an example that a linear model is lacking in fitting to the sugar beet data \parencite{Petersen1994Agricultural}. \textcite{Glynn2007} show that many curves exist beyond a linear trend for nutrient-response relationships. The curve depends on the current availability of other macro and micronutrients in the soil \parencite{Marschner2011}, meaning that a linear relationship is unlikely to be consistent across a large trial. For this reason, it is important to consider models with degrees higher than 1, which means a quadratic model was found to be suitable for relationships \parencite{Piepho2018Tutorial, Liben2019}. 
 %However, when modelling this process it is still common to see linear approximations made \parencite{}. 
 %While segments of nutrient-response relationships may be linear, they will generally exhibit inflection points which arise from processes such as sufficiency or toxicity. 
 
@@ -107,18 +109,18 @@ Analyzing a systematic design for the creation of an optimal treatment map for o
 Our study uses simulation examples to demonstrate that randomisation is not essential for large strip trials. For the purpose of obtaining a treatment map, a systematic design is superior to a randomised design, subject to appropriate restrictions. We also test the power of GWR to determine if it can successfully estimate spatially varying treatment effects for both linear and quadratic responses. Our results show that the optimal bandwidth found by AICc is not the best for GWR. Instead, a fixed bandwidth based on the experimental design is recommended.
 
 
-The structure of the paper is organised as follows: in Section \ref{Sec:Meth}, we describe the statistical model for generating simulated data, which has spatially varying coefficients of treatments, and the GWR model for fitting OFE data. In Section \ref{Sec:Simu}, we generate simulated data for the combination of the following scenarios: randomised and systematic designs; linear and quadratic response; low and high coefficient correlations; spatial variation among grids is identity (no spatial trend), $\AR\otimes\AR$ and \Matern form. Finally, in Sections \ref{Sec:Res} and \ref{Sec:Dis}, we illustrate the results and discuss their importance with respect to OFE, and how the findings should influence future trial designs. 
+The structure of the paper is organised as follows: In Section \ref{Sec:Meth}, we describe the statistical model for generating simulated data, which has spatially varying coefficients of treatments, and the GWR model to fit OFE data. In Section \ref{Sec:Simu}, we generate simulated data for the combination of the following scenarios: randomised and systematic designs; linear and quadratic response; low and high coefficient correlations; spatial variation among grids is identity (no spatial trend), $\AR\otimes\AR$ and \Matern form. Finally, in Sections \ref{Sec:Res} and \ref{Sec:Dis}, we illustrate the results and discuss their importance with respect to OFE, and how the findings should influence future trial designs. 
 
 
 \section{Methods}\label{Sec:Meth}
 
-This section describes the statistical model used in the simulation study. It outlines the basic model (subsection \ref{sec:basic}) followed by the methodology for the spatially correlated treatment parameters (subsection \ref{sec:spatial}), and finally GWR (subsection \ref{sec:gwr}).
+This section describes the statistical model used in the simulation study. It outlines the basic model (Subsection \ref{sec:basic}) followed by the methodology for the spatially correlated treatment parameters (Subsection \ref{sec:spatial}), and finally GWR (Subsection \ref{sec:gwr}).
 
 %and explains the statistical aspects of the models with spatially correlated coefficients.
 
 \subsection{Basic statistical model}\label{sec:basic}
 
-In a conventional agricultural study, a field experiment can be considered as a rectangular array, consisting of $r$ rows and $c$ columns, where the total number of the plots in the experiment is $n=r\times c$. The notation $s_i\in \mathcal{R}^2, i=1,\ldots,n$ is a two-cell vector of the Cartesian coordination of the plot centroids, located on a regular grid \parencite{Zimmerman1991Randoma}. Hence, $y(s_i)$ denotes the dependent variable at a query location/grid $i$. 
+In a conventional agricultural study, a field experiment can be considered as a rectangular matrix consisting of $r$ rows and $c$ columns, where the total number of plots in the experiment is $n=r\times c$. The notation $s_i\in \mathcal{R}^2, i=1,\ldots,n$ is a two-cell vector of the Cartesian coordination of the plot centroids, located on a regular grid \parencite{Zimmerman1991Randoma}. Hence, $y(s_i)$ denotes the dependent variable at a query location/grid $i$. 
 	
 	
 With the assumption that $\bm{Y}$ is the vector of the plot data ordered as rows nested within ranges (columns), then the matrix notation of the model is 
@@ -139,7 +141,7 @@ where $\bm{b}$ and $\bm{u}$ are vectors of fixed and random effects, respectivel
 	
 \subsection{Spatially correlated treatment parameters}\label{sec:spatial}
 
-\textcite{Cao2022Bayesian} implemented the Bayesian hierarchical model with spatially correlated random parameters on large OFE strip trials. Here, for the simulation study, we use the same model to generate the simulated data. 
+\textcite{Cao2022Bayesian} implemented the Bayesian hierarchical model with spatially correlated random parameters on large OFE strip trials. Here, for the simulation study, we use the same model to generate the synthetic data. 
 	
 With the same notation given in the reference and previous section, the underlying model is represented as 
 \begin{equation}\label{eq:underlying}
@@ -167,7 +169,7 @@ In fact, $V_s$ is the covariance matrix of all grids on the field. For example, 
 \begin{equation}\label{eq:ar1cov}
 	V_s = \AR(\rho_c)\otimes \AR(\rho_r),
 \end{equation}
-where AR1 is the separable first-order autoregressive model in the column and row direction which is controlled by the correlation parameters $\rho_c$ and $\rho_r$, respectively \parencite{Butler2017ASRemlR}. 
+where AR1 is the separable first-order auto-regressive model in the column and row direction which is controlled by the correlation parameters $\rho_c$ and $\rho_r$, respectively \parencite{Butler2017ASRemlR}. 
 
 Besides the above $\AR\otimes\AR$ covariance, the \Matern class covariance  
 \begin{equation}\label{eq:matcov}
@@ -178,7 +180,7 @@ is also used in spatial analysis \parencite{Cressie1999Classes} and in capturing
 
 
 
-Model \eqref{eq:underlying} has the advantage of reproducibility in simulation study and robustness in estimation. It is possible even though only a single treatment is directly observed at each plot, and the responses of the other levels need to be estimated by interpolation because the spatial model allows using information from neighbouring plots with other treatments \parencite{Panten2010Enhancing, Piepho2011Statistical}. 
+Model \eqref{eq:underlying} has the advantage of reproducibility in the simulation study and robustness in estimation. It is possible even though only a single treatment is directly observed at each plot, and the responses of the other levels need to be estimated by interpolation because the spatial model allows using information from neighbouring plots with other treatments \parencite{Panten2010Enhancing, Piepho2011Statistical}. 
 
 
 
@@ -186,8 +188,6 @@ Model \eqref{eq:underlying} has the advantage of reproducibility in simulation s
 \subsection{Geographically weighted regression (GWR)}\label{sec:gwr}
 
 Geographically weighted regression (GWR) is a local regression approach and is adapted to obtain spatially-varying estimates of treatment effects for OFE \parencite{Rakshit2020Novel}.  It is seen as a locally weighted regression method that operates by assigning a weight to each observation $i$ depending on its distance from the query grid on the field \parencite{Paez2002General}. 
-
-
 
 
 The underlying template model for the GWR, according to \textcite{Leung2000Statistical}, is given by 
@@ -202,7 +202,7 @@ where $W(s)$ is an $n\times n$ diagonal matrix of weights, $\bm{w}$. Then it can
 \begin{eqnarray}\label{eq:locallog}
 	\log L(s;\beta) = - \frac{1}{2\tau^2}\sum_{i=1}^{n}K(s,s_i)\left( y(s_i) -\beta_0 - \sum_{j=1}^{k}\beta_jz_j(s_i) \right)^2 
 \end{eqnarray}
-with a given kernel function $K(\cdot,\cdot)$, such as Gaussian, exponential, bi-square or tri-cube \parencite{Gollini2015GWmodel}. In the simulation study, we use Gaussian kernel. In fact, kernel is not a crucial factor in GWR model fitting on OFE data. By contrast, the factor bandwidth has higher influence on the estimation.  
+with a given kernel function $K(\cdot,\cdot)$, such as Gaussian, exponential, bi-square or tri-cube \parencite{Gollini2015GWmodel}. In the simulation study, we use a Gaussian kernel. In fact, the kernel is not the crucial factor in the GWR model fitting on OFE data. By contrast, the factor bandwidth has a higher influence on the estimation.  
 
 
 The optimal bandwidth of a GWR model is usually given by the lowest AICc where 
@@ -219,9 +219,9 @@ The GWR model in this paper is implemented with the \R-package \texttt{GWmodel} 
 To study the effect of randomised designs and systematic designs and to evaluate the power of GWR, we simulate spatially correlated large strip trials. The advantage of the simulation study is that the actual coefficients of the models are known, so adverse effects of model misspecification
 can be ruled out \parencite{Piepho2013Why}. 
 
-We investigate the combination of the following factors: types of designs with two levels: randomised and systematic; response relationship with two levels: linear and quadratic; correlation of coefficients with two levels: low and high; spatial variation with three levels: identity (no spatial trend), $\AR\otimes\AR$ and \Matern form; bandwidth of GWR with three levels: 5, 9 and optimum given by AICc. The fixed bandwidth 5 in the simulation study covers all treatment levels (five nitrogen levels) in a systematic design, where the information is adequate in the inference of a quadratic curve. Similarly, the fixed bandwidth 9 covers all possible treatment levels in a randomised design. This is because if all treatments are randomly allocated in the strips, there is a chance that the information of one treatment level is missing if the bandwidth is less than 9. 
+We investigate the combination of the following factors: types of design with two levels: randomised and systematic; response relationship with two levels: linear and quadratic; correlation of coefficients with two levels: low and high; spatial variation with three levels: identity (no spatial trend), $\AR\otimes\AR$ and \Matern form; GWR bandwidth with three levels: 5, 9 and optimum given by AICc. The fixed bandwidth 5 in the simulation study covers all treatment levels (five nitrogen levels) in a systematic design, where the information is adequate in the inference of a quadratic curve. Similarly, the fixed bandwidth 9 covers all possible treatment levels in a randomised design. This is because if all treatments are randomly allocated in the strips, there is a chance that the information of one treatment level is missing if the bandwidth is less than 9. 
 
-With model \eqref{eq:underlying}, we generate the yield as a response to the nitrogen treatment in two scenarios which cover whether the yield has a linear or quadratic relationship with nitrogen rate. The nitrogen rates are treated as continuous observations with five levels: 0, 35, 75, 105 and 140 kg/ha. A strip plot structure was used to allocate the five nitrogen levels where each level is assigned to one strip. Then we assume that the experimental design of the trial consists of four replicates, each containing 5 ranges (columns) by 93 rows. The nitrogen rates are allocated either randomly or systematically on the whole field. The overall layout of the trial is 20 ranges by 93 rows. Examples of a randomly and systematically allocated treatment map are presented in Figure \ref{fig:Nitrogen}. 
+With model \eqref{eq:underlying}, we generate the yield as a response to nitrogen treatment in two scenarios that cover whether the yield has a linear or quadratic relationship with the nitrogen rate. The nitrogen rates are treated as continuous observations with five levels: 0, 35, 75, 105 and 140 kg/ha. A strip plot structure was used to allocate the five nitrogen levels, where each level is assigned to one strip. Then we assume that the experimental design of the trial consists of four replicates, each containing 5 ranges (columns) by 93 rows. The nitrogen rates are allocated randomly or systematically in the whole field. The overall layout of the trial is 20 ranges by 93 rows. Examples of a randomly and systematically allocated treatment map are presented in Figure \ref{fig:Nitrogen}. 
 
 
 \begin{figure}[!htp]
@@ -239,11 +239,11 @@ With model \eqref{eq:underlying}, we generate the yield as a response to the nit
 	\caption{The nitrogen treatments with five levels (0, 35, 70, 105 and 140 kg/ha) randomly \eqref{fig:RandNitrogen} and systematically \eqref{fig:SystNitrogen} allocated into strips in each replicate block.}\label{fig:Nitrogen}
 \end{figure}
 
-With model \eqref{eq:underlying}, the nitrogen rates are treated as continuous observations with five levels. For a linear relationship, we assume that the true global intercept is $b_0 = 65$ and the slope is $b_1=0.05$. The parameters are chosen according to the estimates by \textcite{Rakshit2020Novel, Cao2022Bayesian} on the Las Rosas corn field data, which is initially provided by \textcite{Luc2004ASpatial} and embedded in the \texttt{R}-package \texttt{agridat} \parencite{White2008Agridat}. The unit of yield is quintals per hectare. The variances of $\bm{u}_i$ are $\sigma_{u_0} = 5$ and $\sigma_{u_1}=0.01$. For the $\AR\otimes\AR$ covariance matrix in \eqref{eq:ar1cov}, the two correlation parameters for column and row are $\rho_c = 0.15$ and $\rho_r=0.5$. We have assumed a higher correlation in the rows due to the fact that the crop is traditionally sown and harvested along ranges where the correlation is higher in perpendicular to the travel direction \parencite{Marchant2019Establishinga}. For the \Matern covariance matrix \eqref{eq:matcov}, we set $\sigma_d^2=1$, $r=1$ and $\nu = \frac{3}{2}$. After drawing samples of $\bm{u}$ from $\N(0,\Sigma_u)$, the true spatially varying coefficients are $\bm{\beta}_0 = b_0 + \bm{u}_0$ and $\bm{\beta}_1 = b_1 + \bm{u}_1$. 
+With model \eqref{eq:underlying}, the nitrogen rates are treated as continuous observations with five levels. For a linear relationship, we assume that the true global intercept is $b_0 = 65$ and the slope is $b_1=0.05$. The parameters are chosen according to the estimates by \textcite{Rakshit2020Novel, Cao2022Bayesian} on the Las Rosas corn field data, which is initially provided by \textcite{Luc2004ASpatial} and embedded in the \texttt{R}-package \texttt{agridat} \parencite{White2008Agridat}. The unit of yield is quintals per hectare. The variances of $\bm{u}_i$ are $\sigma_{u_0} = 5$ and $\sigma_{u_1}=0.01$. For the $\AR\otimes\AR$ covariance matrix in \eqref{eq:ar1cov}, the two correlation parameters for column and row are $\rho_c = 0.15$ and $\rho_r=0.5$. We have assumed a higher correlation in the rows due to the fact that the crop is traditionally sown and harvested along ranges where the correlation is higher in the perpendicular direction than the travel direction \parencite{Marchant2019Establishinga}. For the \Matern covariance matrix \eqref{eq:matcov}, we set $\sigma_d^2=1$, $r=1$ and $\nu = \frac{3}{2}$. After drawing samples of $\bm{u}$ from $\N(0,\Sigma_u)$, the true spatially varying coefficients are $\bm{\beta}_0 = b_0 + \bm{u}_0$ and $\bm{\beta}_1 = b_1 + \bm{u}_1$. 
 
 Similarly, for the quadratic relationship, we have the true global intercept $b_0 = 65$, coefficients $b_1 = 0.05$ and $b_2 = -0.0003$, 
 %where the curve is in a frown shape. 
-making the curve concave down. We keep $\sigma_{u_0} = 5$, $\sigma_{u_1}=0.01$ and add $\sigma_{u_2}=0.0001$ because the true values are small. The remaining parameters stay unchanged. Therefore, the true spatially varying coefficients are $\bm{\beta}_0 = b_0 + \bm{u}_0$, $\bm{\beta}_1 = b_1 + \bm{u}_1$ and $\bm{\beta}_2 = b_2 + \bm{u}_2$.
+making the curve concave down. We keep $\sigma_{u_0} = 5$, $\sigma_{u_1}=0.01$ and add $\sigma_{u_2}=0.0001$ because the true values are small. The rest of the parameters remain unchanged. Therefore, the true spatially varying coefficients are $\bm{\beta}_0 = b_0 + \bm{u}_0$, $\bm{\beta}_1 = b_1 + \bm{u}_1$ and $\bm{\beta}_2 = b_2 + \bm{u}_2$.
 
 To summarise, with the true spatially varying coefficients of the treatments, the simulated yield is obtained by 
 \begin{equation}
@@ -256,19 +256,19 @@ To summarise, with the true spatially varying coefficients of the treatments, th
 \end{equation}
 where $N_i$ is the nitrogen rate, $e_i\sim \N(0,1)$ is the error term at grid $i$, $i = 1, \ldots, n$. Figure \ref{fig:Lines} illustrates how these curves behave for the linear and quadratic relationships.
 
-\begin{figure}[H]
+\begin{figure}[!htp]
 	\begin{subfigure}[t]{0.45\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{Expt/LinlinesV2.pdf}
-		\caption{Linear relationship of yield to nitrogen level.}
+		\caption{Linear relationship between crop yield and nitrogen levels, where $y=65+0.05x$.}
 	\end{subfigure}
 	\hspace{0.05\textwidth}
 	\begin{subfigure}[t]{0.45\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{Expt/QualinesV2.pdf}
-		\caption{Quadratic relationship of yield to nitrogen level.}
+		\caption{Quadratic relationship between crop yield and nitrogen levels, where $y=65+0.05x-0.003x^2$.}
 	\end{subfigure}
-	\caption{Noise-free linear and quadratic response to fertiliser treatment.}\label{fig:Lines}
+	\caption{Noise-free linear and quadratic relationships between crop yield and nitrogen levels.}\label{fig:Lines}
 \end{figure}
 
 % Examples of the yield maps with true $\AR\otimes\AR$ spatially varying coefficients are in Figures \ref{fig:LinearYieldMap} and \ref{fig:QuadYieldMap}. 
@@ -309,22 +309,21 @@ The purpose of the simulation study is to test the effect of different types of 
 
 \section{Results}\label{Sec:Res}
 
-By running the simulation 100 times, we assessed the performance of the randomised and systematic designs for linear and quadratic responses. In subsection \ref{Sec:MSE} the mean squared errors are compared between the two designs for different bandwidths, parameter correlations and spatial covariance matrices. Subsection \ref{Sec:anova} uses an analysis of variance (ANOVA) test to explore the significance of the factors in the simulation, while subsection \ref{Sec:bandselect} states the performance of bandwidth selection using AICc. 
+Running the simulation 100 times, we assessed the performance of the randomised and systematic designs for linear and quadratic responses. In subsection \ref{Sec:MSE} the mean squared errors are compared between the two designs for different bandwidths, parameter correlations and spatial covariance matrices. Subsection \ref{Sec:anova} uses an analysis of variance (ANOVA) test to explore the significance of the factors in the simulation, while subsection \ref{Sec:bandselect} states the performance of bandwidth selection using AICc. 
 
 %By running the simulation 100 times, 
 
 \subsection{Mean squared error}\label{Sec:MSE}
 
-We assessed the true mean squared error (MSE) of estimated coefficient differences. This was calculated by the difference of true coefficients, $\bm{\beta} = b + \bm{u}$, and estimated spatially varying coefficients, $\bm{\hat{\beta}} = \hat{b}+\bm{\hat{u}}$, for each grid, and then squared the discrepancy and averaged across the field for comparison. The results are shown in Figures \ref{fig:LinBetaMSE} and \ref{fig:QuadBetaMSE} where ``NS'' stands for no spatial variation ($V_s=I_{n\times n}$), ``AR1'' is for $\AR(0.15)\otimes \AR(0.5)$ and ``Matern'' is the \Matern covariance with $\nu=\frac{3}{2}$. Since the MSE of $\beta_0$, $\beta_1$ and $\beta_2$ are small, we take the natural logarithm for better visualisation. 
+We evaluated the true mean squared error (MSE) of the estimated coefficient differences. This was calculated by the difference of true coefficients, $\bm{\beta} = b + \bm{u}$, and estimated spatially varying coefficients, $\bm{\hat{\beta}} = \hat{b}+\bm{\hat{u}}$, for each grid, and then squared the discrepancy and averaged across the field for comparison. The results are shown in Figures \ref{fig:LinBetaMSE} and \ref{fig:QuadBetaMSE} where ``NS'' stands for no spatial variation ($V_s=I_{n\times n}$), ``AR1'' is for $\AR(0.15)\otimes \AR(0.5)$ and ``Matern'' is the \Matern covariance with $\nu=\frac{3}{2}$. Since the MSEs of $\beta_0$, $\beta_1$, and $\beta_2$ are small, we take the natural logarithm for better visualisation. 
 
 % Paragraph about Figure 3 and the performance for a linear response
-With the assumption of a linear response, both randomised and systematic designs performed similarly, meaning GWR is able to partition the local varying intercept and treatment coefficient. Figure \ref{fig:LinBetaMSE} shows that if the response is linear, the MSE of $\hat{\beta}_0$ and $\hat{\beta}_1$ estimated by GWR
+With the assumption of a linear response, both randomised and systematic designs perform similarly, meaning GWR is able to partition the local varying intercept and treatment coefficient. Figure \ref{fig:LinBetaMSE} shows that if the response is linear, the MSEs of $\hat{\beta}_0$ and $\hat{\beta}_1$ estimated by GWR, for all bandwidths,
 %with bandwidth 5, 9 and the optimal bandwidth found by AICc
-, for all bandwidths,
-is not distinguishing between randomised and systematic designs. This is true regardless of the type of spatial covariance matrix when the correlation within grids is small ($\epsilon=1$), or high ($\epsilon=0.1$) as is shown in Figure \ref{fig:LinBetaMSEeta01}. The GWR with bandwidth selected by AICc had a smaller MSE for its coefficients than the model with a fixed bandwidth (Figure \ref{fig:LinBetaMSE}). 
+is not distinguishing between randomised and systematic designs. This is true regardless of the type of spatial covariance matrix when the correlation within grids is small ($\epsilon=1$), or high ($\epsilon=0.1$) as is shown in Figure \ref{fig:LinBetaMSEeta01}. The GWR with bandwidth selected by AICc has a smaller MSE for its coefficients than the model with a fixed bandwidth (Figure \ref{fig:LinBetaMSE}). 
 
 
-\begin{figure}[H]
+\begin{figure}[!htp]
 	\centering
 	\includegraphics[width=\linewidth]{Expt/Col_LinCombMSE_newpar.pdf}
 	\caption{Boxplots of the logarithm of MSE for $\hat{\beta}_0$ and $\hat{\beta}_1$ in GWR models using different bandwidths for the simulated data with a linear response. The simulated data had different spatial covariance matrices (NS, AR1$\otimes$AR1 and \Matern) and a low correlation between the parameters ($\epsilon=1$).}\label{fig:LinBetaMSE}
@@ -333,9 +332,9 @@ is not distinguishing between randomised and systematic designs. This is true re
 
 
 % Paragraph about Figure 4 and the performance for a linear response
-However, if the assumption is a quadratic response, Figure \ref{fig:QuadBetaMSE} and \ref{fig:QuadBetaMSEeta01} show that the GWR with a fixed bandwidth of a systematic design outperforms a randomised design if the spatial correlation is taken into account. With the optimal bandwidth, GWR successfully estimates the global intercepts $\beta_0$, but failed in estimating local varying coefficients $\beta_1$ and $\beta_2$, where the MSE is relatively larger than with fixed bandwidth. However, if we only compare across two types of designs, it still proves that GWR is robust to fit a systematic design rather than a randomised design if the assumption is quadratic response, regardless the intensity of the correlation within grids. 
+However, if the assumption is a quadratic response, Figures \ref{fig:QuadBetaMSE} and \ref{fig:QuadBetaMSEeta01} show that the GWR with a fixed bandwidth of a systematic design outperforms a randomised design if the spatial correlation is taken into account. With the optimal bandwidth, GWR successfully estimates the global intercepts $\beta_0$ but failed in estimating local varying coefficients $\beta_1$ and $\beta_2$, where the MSE is relatively larger than with fixed bandwidth. However, if we only compare across two types of designs, it still proves that GWR is robust to fit a systematic design rather than a randomised design if the assumption is a quadratic response, regardless of the intensity of the correlation within grids. 
 
-\begin{figure}[H]
+\begin{figure}[!thp]
 	\centering
 	\includegraphics[width=\linewidth]{Expt/Col_QuaCombMSE_newpar.pdf}
 	\caption{Boxplots of the logarithm of MSE for $\hat{\beta}_0$, $\hat{\beta}_1$ and $\hat{\beta}_2$ in GWR models using different bandwidths for the simulated data with a quadratic response. The simulated data had different spatial covariance matrices (NS, AR1$\otimes$AR1 and \Matern) and a low correlation amongst the parameters ($\epsilon=1$).} \label{fig:QuadBetaMSE}
@@ -343,11 +342,13 @@ However, if the assumption is a quadratic response, Figure \ref{fig:QuadBetaMSE}
 
 % Bandwidth MSE Result
 
-The relative MSE for each bandwidth was found to change according to the spatial covariance matrix as well as the coefficient. When no spatial variation was simulated for $\beta_1$ and $\beta_2$, the bandwidth selected by AICc had the lowest MSE, followed by the bandwidths 9 and then 5. When there was spatial variation (either AR1$\otimes$AR1 or \Matern) present the estimation for $\beta_1$ and $\beta_2$ had the lowest MSE when using bandwidth 9, followed by 5 and then bandwidth from AICc. The intercept ($\beta_0$) showed only significant changes in MSE amongst the bandwidths when the \Matern spatial covariance was considered. In this case, the bandwidth selected by AICc produced the smallest MSE.
+%%The relative MSE for each bandwidth was found to change according to the spatial covariance matrix as well as the coefficient. When no spatial variation was simulated for $\beta_1$ and $\beta_2$, the AICc-selected bandwidth has the lowest MSE, followed by the fixed bandwidths of 9 and then 5. When there is spatial variation (either AR1$\otimes$AR1 or \Matern) present the estimation for $\beta_1$ and $\beta_2$ has the lowest MSEs when using bandwidth 9, followed by 5 and then bandwidth from AICc. The intercept ($\beta_0$) shows only significant changes in MSE amongst the bandwidths when the \Matern spatial covariance was considered. In this case, the bandwidth selected by AICc produces the smallest MSE.
 
-Tables \ref{tb:MSElinear} and \ref{tb:MSElinearHigh} are the median MSE of linear response for two scenarios: correlation is low and correlation is high.
+MSE analyses revealed that the choice of bandwidth significantly influenced the relative performance based on both the spatial covariance matrix and the coefficient characteristics. In scenarios without spatial variation for $\beta_1$ and $\beta_2$, the AICc-selected bandwidth demonstrated the lowest MSE, followed by fixed bandwidths of 9 and 5, respectively. However, when the spatial variation was present (utilising either AR1$\otimes$AR1 or \Matern covariance structures), the bandwidth of 9 consistently produced the most accurate estimations for $\beta_1$ and $\beta_2$, outperforming the bandwidths of 5 and the one chosen by AICc. Notably, for the intercept ($\beta_0$), significant changes in MSE amongst the bandwidths were observed only in the context of the \Matern spatial covariance. Here, the bandwidth selected by AICc resulted in the smallest MSE, highlighting its efficacy when dealing with spatially correlated residuals following the \Matern covariance structure. 
 
-\begin{table}[H]
+Tables \ref{tb:MSElinear} and \ref{tb:MSElinearHigh} are the median MSEs of the linear response for two scenarios: the correlation is low and the correlation is high.
+
+\begin{table}[!htp]
 	\centering
 \begin{threeparttable}
 	\caption{Median MSE of GWR coefficient estimates for a linear response when the correlation between the parameters is low ($\epsilon=1$).}\label{tb:MSElinear}
@@ -369,7 +370,7 @@ Tables \ref{tb:MSElinear} and \ref{tb:MSElinearHigh} are the median MSE of linea
 \end{threeparttable}
 \end{table}
 
-\begin{table}[H]
+\begin{table}[!htp]
 	\centering
 \begin{threeparttable}
 	\caption{Median MSE of GWR coefficient estimates of linear response when the correlation between the parameters is high ($\epsilon=0.1$).}\label{tb:MSElinearHigh}
@@ -391,12 +392,12 @@ Tables \ref{tb:MSElinear} and \ref{tb:MSElinearHigh} are the median MSE of linea
 \end{threeparttable}
 \end{table}
 
-\vspace{12pt}
+% \vspace{12pt}
 
-Tables \ref{tb:MSEquadratic} and \ref{tb:MSEquadraticHigh} are the median MSE of quadratic response for two scenarios: correlation is low and correlation is high. Despite the correlation intensity, the data fitted by GWR from systematical designs are superior to randomised designs, having a smaller MSE. 
+Tables \ref{tb:MSEquadratic} and \ref{tb:MSEquadraticHigh} are the median MSE of the quadratic response for two scenarios: correlation is low and correlation is high. Despite the intensity of the correlation, the data fitted by GWR from systematic designs are superior to randomised designs, in terms of having a lower MSE. 
 
 
-\begin{table}[H]
+\begin{table}[!htp]
 	\centering
 \begin{threeparttable}
 	\caption{Median MSE of GWR coefficient estimates of quadratic response when the correlation amongst the parameters is low ($\epsilon=1$).}\label{tb:MSEquadratic}
@@ -419,7 +420,7 @@ Tables \ref{tb:MSEquadratic} and \ref{tb:MSEquadraticHigh} are the median MSE of
 \end{threeparttable}
 \end{table}
 
-\begin{table}[H]
+\begin{table}[!htp]
 	\centering
 \begin{threeparttable}
 	\caption{Median MSE of GWR coefficient estimates of quadratic response when the correlation amongst the parameters is high ($\epsilon=0.1$).}\label{tb:MSEquadraticHigh}
@@ -445,11 +446,11 @@ Tables \ref{tb:MSEquadratic} and \ref{tb:MSEquadraticHigh} are the median MSE of
 
 \subsection{ANOVA}\label{Sec:anova}
 
-Furthermore, ANOVA techniques were used for the analyses of the above results. The analyses were performed for two scenarios of different responses separately. For each response, the coefficients were also accounted for in the model. The objective of the analysis was to investigate the five main factors: two types of design, three bandwidths, three covariance matrices, coefficients $\bm{\beta}$ and the correlation $\epsilon$. The significance patterns of the second-order interactions was also of interest. The results are listed in Table \ref{tb:LMMoutput}. 
+Furthermore, ANOVA techniques were used for the analyses of the above results. The analyses were performed for two scenarios of different responses separately. For each response, the coefficients were also taken into account in the model. The objective of the analysis was to investigate the five main factors: two types of design, three bandwidths, three covariance matrices, coefficients $\bm{\beta}$ and correlation $\epsilon$. The significance patterns of the second-order interactions were also of interest. The results are listed in Table \ref{tb:LMMoutput}. 
 
-The results are consistent with what was observed in the subsection above in that, for the linear response, the difference between randomised and systematic designs was not significant. However, for the quadratic response, the design and its interactions with bandwidth and the coefficients were significant. For both scenarios, the correlation intensity and all of its interactions were not significant (Table \ref{tb:LMMoutput}). Hence, GWR performs similarly with either a low or high correlation between coefficients. Also of note was that the Bandwidth, and its second-order interactions with the variables other than the correlation, was found to be significant for both response types. 
+The results are consistent with what was observed in the previous subsection that, for the linear response, the difference between the randomised and systematic designs was not significant. However, for the quadratic response, the design and its interactions with the bandwidth and the coefficients were significant. For both scenarios, the intensity of the correlation and all its interactions were not significant (Table \ref{tb:LMMoutput}). Therefore, the GWR performs similarly with a low or high correlation between coefficients. Also of note was that bandwidth and its second-order interactions with variables other than correlation were found to be significant for both response types. 
 
-\begin{table}[H]
+\begin{table}[!htp]
 	\centering
 	\caption{ANOVA analyses were conducted on the main factors and their second order interactions. The table lists degrees of freedom (Df), sum of squared errors (Sum Sq) and p-values of F tests (Pr($>$F)). }\label{tb:LMMoutput}
 	\begin{tabular}{r | lll | lll}
@@ -480,7 +481,7 @@ Coefficients:Correlation & 1  & 5.63  & 0.171   & 2  & 0.15  & 0.9834  \\ \botto
 
 From the simulation study, we found that the bandwidth given by AICc skewed to 1 if spatial covariance was included in the model, for all types of the design and the nature of the response. If spatial covariance was not introduced, the GWR tended to use all data in one row (Figure \ref{fig:histband}). 
 
-\begin{figure}[H]
+\begin{figure}[!htp]
 	\begin{subfigure}[t]{0.45\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{Expt/BandwidthLinear.pdf}
@@ -498,22 +499,22 @@ From the simulation study, we found that the bandwidth given by AICc skewed to 1
 \section{Discussion}\label{Sec:Dis}
 
 %1. Summary of Main Findings
-Agronomists and biometricians generally prefer randomised designs for OFE trials. According to the performance metrics used, our simulation study shows a systematic design performed either preferably or similarly to a randomised design for the purposes of creating a varying treatment map. The differentiating factors included primarily the response type and the spatial covariance model, while the correlation amongst the treatment coefficients was not found to be important. These are factors that can be assessed by the farmer beforehand, and this should dictate which design should be used. However, given that a systematic design is easier to implement in the field, and shows little downside for the purposes of creating a varying treatment map, we will advocate for the use of systematic designs. 
+Agronomists and biometricians generally prefer randomised designs for OFE trials. According to the performance metrics used, our simulation study shows a systematic design performs either preferably or similarly to a randomised design for the purposes of creating a varying treatment map. The differentiating factors included primarily the response type and the spatial covariance model, while the correlation amongst the treatment coefficients was not found to be important. These are factors that can be assessed by the farmer beforehand, and this should dictate which design should be used. However, given that a systematic design is easier to implement in the field, and shows little downside for the purposes of creating a varying treatment map, we will advocate for the use of systematic designs. 
 
 %2. How response type affected the performance, and what this means
-The response type was the main differentiating factor between randomised and systematic designs. When the response was quadratic, the systematic design performed favourably which contrasted the result for the linear design which saw low differentiation between the designs. Given this, if a farmer expects an approximately linear response in the field, then the selection of the design may not be important. However, given the variable nature of the relationship between response and treatment over a large field (see i.e \textcite{Rakshit2020Novel}), it may be wise to implement a systematic design for the potential outcome of a quadratic relationship. 
+The response type was the main differentiating factor between randomised and systematic designs. When the response was quadratic, the systematic design performed favourably, which contrasted the result for the linear design. Given this, if a farmer expects an approximately linear response in the field, then the selection of the design may not be important. However, given the variable nature of the relationship between response and treatment over a large field (see \textcite{Rakshit2020Novel}), it may be wise to implement a systematic design for the potential outcome of a quadratic relationship. 
 %For other more complex response types (i.e polynomials of order greater than 2) it is predicted that a systematic design will also perform favourably. \textcolor{red}{?ref}
 %(\textcolor{red}{Might not need a reference)}. 
 
 %2. Discussing Spatial Covariance Structures
 %- Some Questions that might be interesting to answer
 %- Is a \Matern class more realistic and what are its limitations? %- 
-Another consideration for farmers as to which design to use is the expected spatial covariance structure in the field. When no spatial structure was simulated, the differences between the prediction from the systematic and random design were minimal. This result should be expected given if there are no spatial autocorrelations, then the individual query grids are independent observations and therefore the design is not important. However, when a first-order autoregressive structure was simulated the differences were noticeable when a quadratic response was used, showing systematic designs to be preferential. The largest difference between the two designs came when considering the \Matern spatial covariance structure, which showed a clear preference for systematic designs when a quadratic response was considered, and also a small preference for systematic designs for a linear response. Therefore, only if spatial variability was predicted to be negligible in the field would using a randomised design be reasonable given a quadratic response. This assumption of negligible spatial variability would be tough to reason with given the large fields used in on-farm experimentation (add reference), meaning that in the application a systematic design should be used. 
+Another consideration for farmers as to which design to use is the expected spatial covariance structure in the field. When no spatial structure was simulated, the differences between the prediction from the systematic and random design were minimal. This result should be expected given that if there are no spatial autocorrelations, then the individual query grids are independent observations, and therefore the design is not important. However, when a first-order auto-regressive structure was simulated, the differences were noticeable when a quadratic response was used, showing systematic designs to be preferential. The largest difference between the two designs occurred when considering the \Matern spatial covariance structure, which showed a clear preference for systematic designs when a quadratic response was considered, and also a small preference for systematic designs for a linear response. Therefore, only if spatial variability was predicted to be negligible in the field would using a randomised design be reasonable given a quadratic response. This assumption of negligible spatial variability would be difficult to reason with given the large fields used in on-farm experimentation (add reference), meaning that in the application a systematic design should be used. 
 
 % Spatial stationarity is seldom the case in small plot research trials even in highly controlled environments. 
 
 %3. Bandwidth selection and why that is important [good]
-There was found to be significant deficiencies in using AICc for bandwidth selection. The AICc-minimising bandwidths skewed to 1 and, in a few cases, ended in 93 (number of rows). Even though the bandwidth was optimal according to AICc, the MSE was higher than when using a fixed bandwidth. Therefore, we recommended using the fixed bandwidth based on the experimental design (5 or 9 in this case), rather than the recommended bandwidth from AICc which is prone to either over-fitting or being too generalised. Selecting the bandwidth based on the experimental design is also theoretically better since only a single measurement is observed in each grid, all levels of the treatment factor should be included in a GWR window at the same time to interpolate the %quadratic curve
+There were found to be significant deficiencies in using AICc for bandwidth selection. The AICc-minimising bandwidths skewed to 1 and, in a few cases, ended in 93 (number of rows). Even though the bandwidth was optimal according to AICc, the MSE was higher than when using a fixed bandwidth. Therefore, we recommended using the fixed bandwidth based on the experimental design (5 or 9 in this case), rather than the recommended bandwidth from AICc which is prone to either over-fitting or being too generalised. Selecting the bandwidth based on the experimental design is also theoretically better since only a single measurement is observed in each grid, all levels of the treatment factor should be included in a GWR window at the same time to interpolate the %quadratic curve
 relationship. Otherwise, the interpolation is incomplete if more than one level is missing. 
 
 % ... AICc-minimising bandwidth were skewed towards the upper ($sqrt(19^2+92^2)=93.94147$) or lower (1) bounds; two characteristics which are suggestive of underlying stationary or random processes  respectively \textcite{}.  
@@ -523,7 +524,7 @@ relationship. Otherwise, the interpolation is incomplete if more than one level 
 %The level of correlation between the coefficients as governed by $\epsilon$ was found to no be significant (Table \ref{tb:LMMoutput}). This indicates that GWR performs similarly with either low or high correlation between coefficients. %This is an unexpected/expected result... 
 
 %5. Recommendation of design variations
-Given the scope of the paper, some designs and factors were not considered. Designs such as chequerboard or wave designs have been suggested for on-farm experiments \parencite{bramley1999designing}, however, were not able to be considered here. Topographical factors (spatial zones) were also not entertained in our study. Since GWR estimates a global template model and then adjusts it at a local scale across the study region, the variation between zones is ``flushed out'' by the spatial covariance.
+Given the scope of the paper, some designs and factors were not considered. Designs such as chequerboard or wave designs have been suggested for on-farm experiments \parencite{bramley1999designing}, however, were not considered here. Topographical factors (spatial zones) were also not entertained in our study. Since GWR estimates a global template model and then adjusts it at a local scale across the study region, the variation between zones is ``flushed out'' by the spatial covariance.
 
 %However, this is not practical for farmers as the complex layout of the treatments will increase the cost of sowing and harvesting. Therefore, unless the objective is for variety selection, we do not recommend such designs to agronomists. 
 
@@ -532,7 +533,7 @@ Given the scope of the paper, some designs and factors were not considered. Desi
 
 \section{Conclusion}\label{Sec:Conclusion}
 
-Agronomists and biometricians generally prefer randomised designs for OFE trials. With the purpose of creating a varying treatment map, our simulation study proves that a systematic design produces better performance metrics, under particular circumstances, than a randomised design for large on-farm trials in terms of robustness and smaller MSE on coefficients. On the other hand, if the spatial variation is not considered, or if researchers believe in linear response, either a systematic or a randomised design could be implemented because the difference is not significant. We recommend that, for a large OFE trial with the goal to create a varying treatment map, a systemic design should be used as it has more flexibility in post-experiment statistical modelling. 
+Agronomists and biometricians generally prefer randomised designs for OFE trials. With the purpose of creating a varying treatment map, our simulation study proves that a systematic design produces better performance metrics, under particular circumstances, than a randomised design for large on-farm trials in terms of robustness and smaller MSE on coefficients. On the other hand, if spatial variation is not considered or if researchers believe in linear response, a systematic or a randomised design could be implemented because the difference is not significant. We recommend that, for a large OFE strip trial with the goal to create a varying treatment map, a systemic design should be used as it has more flexibility in post-experiment statistical modelling. 
 
 % Perhaps we add a comment along the lines - "Further research is needed in the case of OFE (and GWR?) when it comes to more complex designs such as chequerboard, donut etc."
 
