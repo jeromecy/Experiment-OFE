@@ -526,15 +526,15 @@ LinAll[nms] <- lapply(LinAll[nms], as.factor)
 QuaAll[nms] <- lapply(QuaAll[nms], as.factor)
 
 
-linall.as <- asreml(Value ~ Design + BandWidth + Cov +  Eta, ## had + FacBeta
-                  data = LinAll)
-wald(linall.as,denDF = "default",ssType = "conditional")
-
-
-quaall.as <- asreml(Value ~ Design + BandWidth + Cov + Eta, ## had + FacBeta
-                    data = QuaAll)
-wald(quaall.as,denDF = "default",ssType = "conditional")
-
+# linall.as <- asreml(Value ~ Design + BandWidth + Cov +  Eta, ## had + FacBeta
+#                   data = LinAll)
+# wald(linall.as,denDF = "default",ssType = "conditional")
+# 
+# 
+# quaall.as <- asreml(Value ~ Design + BandWidth + Cov + Eta, ## had + FacBeta
+#                     data = QuaAll)
+# wald(quaall.as,denDF = "default",ssType = "conditional")
+# 
 
 
 linall.aov <- aov(Value ~ Design + BandWidth + Cov  + Eta +  ## had + FacBeta
@@ -701,11 +701,123 @@ library(viridis)
 
 custom_colors <- c("Randomised" = "gray70", "Systematic" = "white")
 
+generate_plots <- function(data, custom_colors) {
+  data$Cov <- factor(data$Cov, levels = c("NS","AR1","Matern" ))
+  
+  plot_list <- lapply(unique(data$Beta), function(beta, Eta = unique(data$Eta)) {
+    lapply(sort(unique(data$Cov)), function(cov) {
+      p <- ggplot(subset(data, Beta == beta & Cov == as.character(cov)), 
+                  aes(BandWidth, Value)) +
+        geom_boxplot(aes(fill = Design)) +
+        ylab("") + xlab("") +
+        thm1 +
+        scale_x_discrete(labels = c("5", "9", "AICc")) +
+        scale_fill_manual(values = custom_colors) +
+        theme(plot.margin = unit(c(0, 0.5, 0, 0), "cm")) 
+      
+      if (beta == 1) {
+        p <- p +       
+          labs(title = bquote(beta[.(beta)] ~ .("x") ~10^4 ~ .(", ") ~ 
+                                .(as.character(cov)) ~ .(", ") ~ epsilon ~"=" ~.(Eta)))+
+          scale_y_log10(labels = function(x) x * 1e4)
+      } else if (beta == 2) {
+        p <- p +       
+          labs(title = bquote(beta[.(beta)] ~ .("x") ~10^8 ~ .(", ") ~ 
+                                .(as.character(cov)) ~ .(", ") ~ epsilon ~ "=" ~.(Eta))) +
+          scale_y_log10(labels = function(x) x * 1e8)
+      } else {
+        p <- p +
+          labs(title = bquote(beta[.(beta)] ~ ", " ~.(as.character(cov)) ~ .(", ") ~ epsilon ~ "=" ~.(Eta))) +
+          scale_y_log10()
+      }
+      
+      return(p)
+    })
+  })
+  
+  # Flatten the list of lists
+  plot_list <- do.call(c, plot_list)
+  
+  return(plot_list)
+}
+
+
+plot_list_LinComb <- generate_plots(LinComb, custom_colors)
+combined_plot_LinComb <- ggarrange(plotlist = plot_list_LinComb, 
+                                   ncol = 3, nrow = 2,
+                                   align = "hv", 
+                                   # plot.margin = unit(c(0.5, 0.5, 0.5, 0.5), "cm"),
+                                   common.legend = TRUE, legend = "top")
+combined_plot_LinComb <- annotate_figure(combined_plot_LinComb,
+                                         bottom = text_grob("Bandwidth", size = 20),
+                                         left = text_grob("MSE", size = 20, rot = 90))
+print(combined_plot_LinComb)
+## Col_LinCombMSE_newpar_V3
+
+
+plot_list_QuaComb <- generate_plots(QuaComb, custom_colors)
+combined_plot_QuaComb <- ggarrange(plotlist = plot_list_QuaComb, 
+                                   ncol = 3, nrow = 3,
+                                   align = "hv", 
+                                   # plot.margin = unit(c(0.5, 0.5, 0.5, 0.5), "cm"),
+                                   common.legend = TRUE, legend = "top")
+combined_plot_QuaComb <- annotate_figure(combined_plot_QuaComb,
+                                         bottom = text_grob("Bandwidth", size = 20),
+                                         left = text_grob("MSE", size = 20, rot = 90))
+print(combined_plot_QuaComb)
+## Col_QuaCombMSE_newpar_V3
+
+
+plot_list_LinComb_eta01 <- generate_plots(LinComb_eta01, custom_colors)
+combined_plot_LinComb_eta01 <- ggarrange(plotlist = plot_list_LinComb_eta01, 
+                                         ncol = 3, nrow = 2,
+                                         align = "hv", 
+                                         # plot.margin = unit(c(0.5, 0.5, 0.5, 0.5), "cm"),
+                                         common.legend = TRUE, legend = "top")
+combined_plot_LinComb_eta01 <- annotate_figure(combined_plot_LinComb_eta01,
+                                               bottom = text_grob("Bandwidth", size = 20),
+                                               left = text_grob("MSE", size = 20, rot = 90))
+print(combined_plot_LinComb_eta01)
+## Col_LinCombMSE_newpar_eta01_V3
+
+
+
+plot_list_QuaComb_eta01 <- generate_plots(QuaComb_eta01, custom_colors)
+combined_plot_QuaComb_eta01 <- ggarrange(plotlist = plot_list_QuaComb_eta01, 
+                                         ncol = 3, nrow = 3,
+                                         align = "hv", 
+                                         # plot.margin = unit(c(0.5, 0.5, 0.5, 0.5), "cm"),
+                                         common.legend = TRUE, legend = "top")
+combined_plot_QuaComb_eta01 <- annotate_figure(combined_plot_QuaComb_eta01,
+                                               bottom = text_grob("Bandwidth", size = 20),
+                                               left = text_grob("MSE", size = 20, rot = 90))
+print(combined_plot_QuaComb_eta01)
+## Col_QuaCombMSE_newpar_eta01_V3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+######### archive ############
 
 levels(LinComb$Cov)
 LinComb$Cov <- factor(LinComb$Cov, levels = c("NS","AR1","Matern" ))
 
-plot_list_LinComb <- lapply(unique(LinComb$Beta), function(beta) {
+plot_list_LinComb <- lapply(unique(LinComb$Beta), function(beta, Eta = unique(LinComb$Eta)) {
   lapply(sort(unique(LinComb$Cov)), function(cov) {
     p <- ggplot(subset(LinComb, Beta == beta & Cov == as.character(cov)), 
                 aes(BandWidth, Value)) +
@@ -718,11 +830,13 @@ plot_list_LinComb <- lapply(unique(LinComb$Beta), function(beta) {
     
     if (beta == 1) {
       p <- p +       
-        labs(title = bquote(beta[.(beta)] ~ .("x") ~10^4 ~ .(", ") ~ .(as.character(cov))))+
+        labs(title = bquote(beta[.(beta)] ~ .("x") ~10^4 ~ .(", ") ~ 
+                              .(as.character(cov)) ~ .(", ") ~ epsilon ~"=" ~.(Eta)))+
       scale_y_log10(labels = function(x) x * 1e4)
     } else {
       p <- p +
-        labs(title = bquote(beta[.(beta)] * ", " * .(as.character(cov)))) +
+        labs(title = bquote(beta[.(beta)] ~ ", " ~.(as.character(cov)) ~ 
+                              .(", ") ~ epsilon ~ "=" ~.(Eta))) +
         scale_y_log10()
     }
     
@@ -751,7 +865,7 @@ print(combined_plot_LinComb)
 
 QuaComb$Cov <- factor(QuaComb$Cov, levels = c("NS","AR1","Matern" ))
 # Create individual plots without x and y labels
-plot_list_QuaComb <- lapply(unique(QuaComb$Beta), function(beta) {
+plot_list_QuaComb <- lapply(unique(QuaComb$Beta), function(beta,Eta = unique(QuaComb$Eta)) {
   lapply(sort(unique(QuaComb$Cov)), function(cov) {
     p <- ggplot(subset(QuaComb, Beta == beta & Cov == as.character(cov)), aes(BandWidth, Value)) +
       geom_boxplot(aes(fill = Design)) +
@@ -765,18 +879,19 @@ plot_list_QuaComb <- lapply(unique(QuaComb$Beta), function(beta) {
     # If the plot is the 4th to 6th in the list, modify the y-axis labels
     if (beta == 2) {
       p <- p +       
-        labs(title = bquote(beta[.(beta)] ~ .("x") ~10^8 ~ .(", ") ~ .(as.character(cov))))+
+        labs(title = bquote(beta[.(beta)] ~ .("x") ~10^8 ~ .(", ") ~ 
+                              .(as.character(cov)) ~ .(", ") ~ epsilon ~ "=" ~.(Eta))) +
         scale_y_log10(labels = function(x) x * 1e8)
-    }else if(beta == 1) {
+    }else if (beta == 1) {
       p <- p +       
-        labs(title = bquote(beta[.(beta)] ~ .("x") ~10^4 ~ .(", ") ~ .(as.character(cov))))+
+        labs(title = bquote(beta[.(beta)] ~ .("x") ~10^4 ~ .(", ") ~ 
+                              .(as.character(cov)) ~ .(", ") ~ epsilon ~ "=" ~.(Eta))) +
         scale_y_log10(labels = function(x) x * 1e4)
-    }else {
+    } else {
       p <- p +
-        labs(title = bquote(beta[.(beta)] * ", " * .(as.character(cov)))) +
+        labs(title = bquote(beta[.(beta)] ~ ", " ~.(as.character(cov)) ~ .(", ") ~ epsilon ~ "=" ~.(Eta))) +
         scale_y_log10()
     }
-    
   })
 })
 
@@ -801,11 +916,10 @@ print(combined_plot_QuaComb)
 
 
 
-
-
 LinComb_eta01$Cov <- factor(LinComb_eta01$Cov, levels = c("NS","AR1","Matern" ))
 
-plot_list_LinComb_eta01 <- lapply(unique(LinComb_eta01$Beta), function(beta) {
+plot_list_LinComb_eta01 <- lapply(unique(LinComb_eta01$Beta), 
+                                  function(beta, Eta = unique(LinComb_eta01$Eta)) {
   lapply(sort(unique(LinComb_eta01$Cov)), function(cov) {
     p <- ggplot(subset(LinComb_eta01, Beta == beta & Cov == as.character(cov)), 
                 aes(BandWidth, Value)) +
@@ -818,11 +932,13 @@ plot_list_LinComb_eta01 <- lapply(unique(LinComb_eta01$Beta), function(beta) {
     
     if (beta == 1) {
       p <- p +       
-        labs(title = bquote(beta[.(beta)] ~ .("x") ~10^4 ~ .(", ") ~ .(as.character(cov))))+
+        labs(title = bquote(beta[.(beta)] ~ .("x") ~10^4 ~ .(", ") ~ 
+                              .(as.character(cov)) ~ .(", ") ~ epsilon ~"=" ~.(Eta)))+
         scale_y_log10(labels = function(x) x * 1e4)
     } else {
       p <- p +
-        labs(title = bquote(beta[.(beta)] * ", " * .(as.character(cov)))) +
+        labs(title = bquote(beta[.(beta)] ~ ", " ~.(as.character(cov)) ~ 
+                              .(", ") ~ epsilon ~ "=" ~.(Eta))) +
         scale_y_log10()
     }
     
@@ -846,12 +962,13 @@ combined_plot_LinComb_eta01 <- annotate_figure(combined_plot_LinComb_eta01,
 
 # Print the combined plot
 print(combined_plot_LinComb_eta01)
-## Col_QuaCombMSE_newpar_eta01
+## Col_LinCombMSE_newpar_eta01
 
 
 QuaComb_eta01$Cov <- factor(QuaComb_eta01$Cov, levels = c("NS","AR1","Matern" ))
 # Create individual plots without x and y labels
-plot_list_QuaComb_eta01 <- lapply(unique(QuaComb_eta01$Beta), function(beta) {
+plot_list_QuaComb_eta01 <- lapply(unique(QuaComb_eta01$Beta), 
+                                  function(beta,Eta = unique(QuaComb_eta01$Eta)) {
   lapply(sort(unique(QuaComb_eta01$Cov)), function(cov) {
     p <- ggplot(subset(QuaComb_eta01, Beta == beta & Cov == as.character(cov)), aes(BandWidth, Value)) +
       geom_boxplot(aes(fill = Design)) +
@@ -865,18 +982,19 @@ plot_list_QuaComb_eta01 <- lapply(unique(QuaComb_eta01$Beta), function(beta) {
     # If the plot is the 4th to 6th in the list, modify the y-axis labels
     if (beta == 2) {
       p <- p +       
-        labs(title = bquote(beta[.(beta)] ~ .("x") ~10^8 ~ .(", ") ~ .(as.character(cov))))+
+        labs(title = bquote(beta[.(beta)] ~ .("x") ~10^8 ~ .(", ") ~ 
+                              .(as.character(cov)) ~ .(", ") ~ epsilon ~ "=" ~.(Eta))) +
         scale_y_log10(labels = function(x) x * 1e8)
-    }else if(beta == 1) {
+    }else if (beta == 1) {
       p <- p +       
-        labs(title = bquote(beta[.(beta)] ~ .("x") ~10^4 ~ .(", ") ~ .(as.character(cov))))+
+        labs(title = bquote(beta[.(beta)] ~ .("x") ~10^4 ~ .(", ") ~ 
+                              .(as.character(cov)) ~ .(", ") ~ epsilon ~ "=" ~.(Eta))) +
         scale_y_log10(labels = function(x) x * 1e4)
-    }else {
+    } else {
       p <- p +
-        labs(title = bquote(beta[.(beta)] * ", " * .(as.character(cov)))) +
+        labs(title = bquote(beta[.(beta)] ~ ", " ~.(as.character(cov)) ~ .(", ") ~ epsilon ~ "=" ~.(Eta))) +
         scale_y_log10()
     }
-    
   })
 })
 
