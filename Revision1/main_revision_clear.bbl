@@ -1,0 +1,1370 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nyt/global//global/global}
+  \entry{Abramowitz1974Handbook}{book}{}
+    \name{author}{1}{}{%
+      {{hash=AM}{%
+         family={Abramowitz},
+         familyi={A\bibinitperiod},
+         given={Milton},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {{Dover Publications, Inc.}}%
+    }
+    \strng{namehash}{AM1}
+    \strng{fullhash}{AM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1974}
+    \field{labeldatesource}{}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{isbn}{978-0-486-61272-0}
+    \field{title}{Handbook of {{Mathematical Functions}}, {{With Formulas}},
+  {{Graphs}}, and {{Mathematical Tables}}}
+    \list{location}{1}{%
+      {{USA}}%
+    }
+    \field{annotation}{%
+    ZSCC: 0000001%
+    }
+    \field{year}{1974}
+  \endentry
+
+  \entry{Alesso2021Design}{article}{}
+    \name{author}{4}{}{%
+      {{hash=ACA}{%
+         family={Alesso},
+         familyi={A\bibinitperiod},
+         given={Carlos\bibnamedelima Agustín},
+         giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=CPA}{%
+         family={Cipriotti},
+         familyi={C\bibinitperiod},
+         given={Pablo\bibnamedelima Ariel},
+         giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=BGA}{%
+         family={Bollero},
+         familyi={B\bibinitperiod},
+         given={Germán\bibnamedelima Alberto},
+         giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=MNF}{%
+         family={Martin},
+         familyi={M\bibinitperiod},
+         given={Nicolas\bibnamedelima Federico},
+         giveni={N\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ACA+1}
+    \strng{fullhash}{ACACPABGAMNF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2021}
+    \field{labeldatesource}{}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \verb{doi}
+    \verb https://doi.org/10.1002/agj2.20572
+    \endverb
+    \verb{eprint}
+    \verb https://acsess.onlinelibrary.wiley.com/doi/pdf/10.1002/agj2.20572
+    \endverb
+    \field{number}{2}
+    \field{pages}{1366\bibrangedash 1380}
+    \field{title}{Design of on-farm precision experiments to estimate
+  site-specific crop responses}
+    \verb{url}
+    \verb https://acsess.onlinelibrary.wiley.com/doi/abs/10.1002/agj2.20572
+    \endverb
+    \field{volume}{113}
+    \field{journaltitle}{Agronomy Journal}
+    \field{year}{2021}
+  \endentry
+
+  \entry{Luc2004ASpatial}{article}{}
+    \name{author}{3}{}{%
+      {{hash=AL}{%
+         family={Anselin},
+         familyi={A\bibinitperiod},
+         given={Luc},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=BR}{%
+         family={Bongiovanni},
+         familyi={B\bibinitperiod},
+         given={Rodolfo},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=LDJ}{%
+         family={Lowenberg-DeBoer},
+         familyi={L\bibinithyphendelim D\bibinitperiod},
+         given={Jess},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \keyw{Argentina, corn, precision agriculture, site-specific nitrogen
+  management, spatial autocorrelation, spatial econometrics, variable rate}
+    \strng{namehash}{AL+1}
+    \strng{fullhash}{ALBRLDJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2004}
+    \field{labeldatesource}{}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \verb{doi}
+    \verb https://doi.org/10.1111/j.0002-9092.2004.00610.x
+    \endverb
+    \verb{eprint}
+    \verb https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.0002-9092.2004.0061
+    \verb 0.x
+    \endverb
+    \field{number}{3}
+    \field{pages}{675\bibrangedash 687}
+    \field{title}{A Spatial Econometric Approach to the Economics of
+  Site-Specific Nitrogen Management in Corn Production}
+    \verb{url}
+    \verb https://onlinelibrary.wiley.com/doi/abs/10.1111/j.0002-9092.2004.0061
+    \verb 0.x
+    \endverb
+    \field{volume}{86}
+    \field{journaltitle}{American Journal of Agricultural Economics}
+    \field{year}{2004}
+  \endentry
+
+  \entry{bramley1999designing}{article}{}
+    \name{author}{4}{}{%
+      {{hash=BR}{%
+         family={Bramley},
+         familyi={B\bibinitperiod},
+         given={RGV},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=CS}{%
+         family={Cook},
+         familyi={C\bibinitperiod},
+         given={SE},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=AM}{%
+         family={Adams},
+         familyi={A\bibinitperiod},
+         given={ML},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=CR}{%
+         family={Corner},
+         familyi={C\bibinitperiod},
+         given={RJ},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{2}{%
+      {Kingston, ACT, Grains Research}%
+      {Development Corporation}%
+    }
+    \strng{namehash}{BR+1}
+    \strng{fullhash}{BRCSAMCR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1999}
+    \field{labeldatesource}{}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{Designing your own on-farm experiments: How precision
+  agriculture can help}
+    \field{year}{1999}
+  \endentry
+
+  \entry{Butler2017ASRemlR}{misc}{}
+    \name{author}{5}{}{%
+      {{hash=BD}{%
+         family={Butler},
+         familyi={B\bibinitperiod},
+         given={D.G.},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=CB}{%
+         family={Cullis},
+         familyi={C\bibinitperiod},
+         given={B.R.},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=GA}{%
+         family={Gilmour},
+         familyi={G\bibinitperiod},
+         given={A.R.},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=GB}{%
+         family={Gogel},
+         familyi={G\bibinitperiod},
+         given={B.G.},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=TR}{%
+         family={Thompson},
+         familyi={T\bibinitperiod},
+         given={R.},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {{VSN International Ltd, Hemel Hempstead, HP1 1ES, UK.}}%
+    }
+    \strng{namehash}{BD+1}
+    \strng{fullhash}{BDCBGAGBTR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2017}
+    \field{labeldatesource}{}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{{{ASReml}}-{{R Reference Manual Version}} 4}
+    \field{annotation}{%
+    ZSCC: 0000003%
+    }
+    \field{year}{2017}
+  \endentry
+
+  \entry{Cao2022Bayesian}{article}{}
+    \name{author}{4}{}{%
+      {{hash=CZ}{%
+         family={Cao},
+         familyi={C\bibinitperiod},
+         given={Zhanglong},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=SK}{%
+         family={Stefanova},
+         familyi={S\bibinitperiod},
+         given={Katia},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=GM}{%
+         family={Gibberd},
+         familyi={G\bibinitperiod},
+         given={Mark},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=RS}{%
+         family={Rakshit},
+         familyi={R\bibinitperiod},
+         given={Suman},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CZ+1}
+    \strng{fullhash}{CZSKGMRS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2022}
+    \field{labeldatesource}{}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \verb{doi}
+    \verb https://doi.org/10.1016/j.fcr.2022.108477
+    \endverb
+    \field{issn}{0378-4290}
+    \field{pages}{108477}
+    \field{title}{Bayesian inference of spatially correlated random parameters
+  for on-farm experiment}
+    \verb{url}
+    \verb https://www.sciencedirect.com/science/article/pii/S037842902200048X
+    \endverb
+    \field{volume}{281}
+    \field{journaltitle}{Field Crops Research}
+    \field{year}{2022}
+  \endentry
+
+  \entry{Cook2013Onfarm}{article}{}
+    \name{author}{4}{}{%
+      {{hash=CS}{%
+         family={Cook},
+         familyi={C\bibinitperiod},
+         given={Simon},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=CJ}{%
+         family={Cock},
+         familyi={C\bibinitperiod},
+         given={James},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=OT}{%
+         family={Oberth{\"u}r},
+         familyi={O\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=FM}{%
+         family={Fisher},
+         familyi={F\bibinitperiod},
+         given={Myles},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CS+1}
+    \strng{fullhash}{CSCJOTFM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2013}
+    \field{labeldatesource}{}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{pages}{17\bibrangedash 20}
+    \field{series}{4}
+    \field{title}{On-Farm Experimentation}
+    \field{volume}{97}
+    \field{journaltitle}{Better Crop. Plant Food}
+    \field{year}{2013}
+  \endentry
+
+  \entry{Cressie1999Classes}{article}{}
+    \name{author}{2}{}{%
+      {{hash=CN}{%
+         family={Cressie},
+         familyi={C\bibinitperiod},
+         given={Noel},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=HHC}{%
+         family={Huang},
+         familyi={H\bibinitperiod},
+         given={Hsin-Cheng},
+         giveni={H\bibinithyphendelim C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {{Taylor \& Francis}}%
+    }
+    \keyw{Bochner's theorem,Matern covariance,Positive definite,Simple
+  kriging.}
+    \strng{namehash}{CNHHC1}
+    \strng{fullhash}{CNHHC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1999}
+    \field{labeldatesource}{}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \verb{doi}
+    \verb 10.1080/01621459.1999.10473885
+    \endverb
+    \field{issn}{0162-1459}
+    \field{number}{448}
+    \field{pages}{1330\bibrangedash 1339}
+    \field{title}{Classes of {{Nonseparable}}, {{Spatio}}-{{Temporal Stationary
+  Covariance Functions}}}
+    \field{volume}{94}
+    \field{journaltitle}{Journal of the American Statistical Association}
+    \field{month}{12}
+    \field{year}{1999}
+  \endentry
+
+  \entry{Evans2020Assessment}{article}{}
+    \name{author}{5}{}{%
+      {{hash=EFH}{%
+         family={Evans},
+         familyi={E\bibinitperiod},
+         given={Fiona\bibnamedelima H.},
+         giveni={F\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=RSA}{%
+         family={Recalde\bibnamedelima Salas},
+         familyi={R\bibinitperiod\bibinitdelim S\bibinitperiod},
+         given={Angela},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=RS}{%
+         family={Rakshit},
+         familyi={R\bibinitperiod},
+         given={Suman},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=SCA}{%
+         family={Scanlan},
+         familyi={S\bibinitperiod},
+         given={Craig\bibnamedelima A.},
+         giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=CSE}{%
+         family={Cook},
+         familyi={C\bibinitperiod},
+         given={Simon\bibnamedelima E.},
+         giveni={S\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {en}%
+    }
+    \list{publisher}{1}{%
+      {{Multidisciplinary Digital Publishing Institute}}%
+    }
+    \keyw{digital agriculture,geographically weighted regression,on-farm
+  experimentation,precision agriculture,spatial analysis}
+    \strng{namehash}{EFH+1}
+    \strng{fullhash}{EFHRSARSSCACSE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2020}
+    \field{labeldatesource}{}
+    \field{sortinit}{E}
+    \field{sortinithash}{E}
+    \verb{doi}
+    \verb 10.3390/agronomy10111720
+    \endverb
+    \field{number}{11}
+    \field{pages}{1720}
+    \field{title}{Assessment of the {{Use}} of {{Geographically Weighted
+  Regression}} for {{Analysis}} of {{Large On}}-{{Farm Experiments}} and
+  {{Implications}} for {{Practical Application}}}
+    \field{volume}{10}
+    \field{journaltitle}{Agronomy}
+    \field{month}{11}
+    \field{year}{2020}
+  \endentry
+
+  \entry{Fisher1934Statistical}{book}{}
+    \name{author}{1}{}{%
+      {{hash=FRA}{%
+         family={Fisher},
+         familyi={F\bibinitperiod},
+         given={Ronald\bibnamedelima Aylmer},
+         giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {English}%
+    }
+    \list{publisher}{1}{%
+      {{Oliver and Boyd}}%
+    }
+    \strng{namehash}{FRA1}
+    \strng{fullhash}{FRA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1934}
+    \field{labeldatesource}{}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{edition}{fifth}
+    \field{title}{Statistical Methods for Research Workers}
+    \list{location}{1}{%
+      {{Edinburgh}}%
+    }
+    \field{annotation}{%
+    ZSCC: 0000005 OCLC: 4972023%
+    }
+    \field{year}{1934}
+  \endentry
+
+  \entry{Glynn2007}{article}{}
+    \name{author}{1}{}{%
+      {{hash=GC}{%
+         family={Glynn},
+         familyi={G\bibinitperiod},
+         given={Carolyn},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \keyw{Condensed tannins,Growth-differentiation balance
+  hypothesis,Optimality theory,Phenolic glycosides,Phenotypic plasticity,Salix
+  eriocephala,Salix sericea,Secondary metabolism}
+    \strng{namehash}{GC1}
+    \strng{fullhash}{GC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2007}
+    \field{labeldatesource}{}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \verb{doi}
+    \verb 10.1111/j.1469-8137.2007.02203.x
+    \endverb
+    \field{issn}{0028-646X}
+    \field{number}{3}
+    \field{pages}{623\bibrangedash 634}
+    \field{title}{{Testing the Growth-Differentiation Balance Hypothesis:
+  Dynamic Responses of Willows to Nutrient Availability}}
+    \field{volume}{176}
+    \field{journaltitle}{New Phytologist}
+    \field{year}{2007}
+  \endentry
+
+  \entry{Gollini2015GWmodel}{article}{}
+    \name{author}{5}{}{%
+      {{hash=GI}{%
+         family={Gollini},
+         familyi={G\bibinitperiod},
+         given={Isabella},
+         giveni={I\bibinitperiod},
+      }}%
+      {{hash=LB}{%
+         family={Lu},
+         familyi={L\bibinitperiod},
+         given={Binbin},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=CM}{%
+         family={Charlton},
+         familyi={C\bibinitperiod},
+         given={Martin},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=BC}{%
+         family={Brunsdon},
+         familyi={B\bibinitperiod},
+         given={Christopher},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=HP}{%
+         family={Harris},
+         familyi={H\bibinitperiod},
+         given={Paul},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {en}%
+    }
+    \strng{namehash}{GI+1}
+    \strng{fullhash}{GILBCMBCHP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{labelyear}{2015}
+    \field{labeldatesource}{}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \verb{doi}
+    \verb 10.18637/jss.v063.i17
+    \endverb
+    \field{issn}{1548-7660}
+    \field{number}{1}
+    \field{pages}{1\bibrangedash 50}
+    \field{shorttitle}{{{GWmodel}}}
+    \field{title}{{{GWmodel}}: {{An R Package}} for {{Exploring Spatial
+  Heterogeneity Using Geographically Weighted Models}}}
+    \field{volume}{63}
+    \field{journaltitle}{Journal of Statistical Software}
+    \field{month}{02}
+    \field{year}{2015}
+  \endentry
+
+  \entry{Lewandowski2009Generating}{article}{}
+    \name{author}{3}{}{%
+      {{hash=LD}{%
+         family={Lewandowski},
+         familyi={L\bibinitperiod},
+         given={Daniel},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=KD}{%
+         family={Kurowicka},
+         familyi={K\bibinitperiod},
+         given={Dorota},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=JH}{%
+         family={Joe},
+         familyi={J\bibinitperiod},
+         given={Harry},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \keyw{Dependence vines, Correlation matrix, Partial correlation, Onion
+  method}
+    \strng{namehash}{LD+1}
+    \strng{fullhash}{LDKDJH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2009}
+    \field{labeldatesource}{}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \verb{doi}
+    \verb https://doi.org/10.1016/j.jmva.2009.04.008
+    \endverb
+    \field{issn}{0047-259X}
+    \field{number}{9}
+    \field{pages}{1989\bibrangedash 2001}
+    \field{title}{Generating random correlation matrices based on vines and
+  extended onion method}
+    \verb{url}
+    \verb https://www.sciencedirect.com/science/article/pii/S0047259X09000876
+    \endverb
+    \field{volume}{100}
+    \field{journaltitle}{Journal of Multivariate Analysis}
+    \field{year}{2009}
+  \endentry
+
+  \entry{Liben2019}{article}{}
+    \name{author}{4}{}{%
+      {{hash=LFM}{%
+         family={Liben},
+         familyi={L\bibinitperiod},
+         given={Feyera\bibnamedelima M},
+         giveni={F\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=MT}{%
+         family={Midega},
+         familyi={M\bibinitperiod},
+         given={Tesfaye},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=TT}{%
+         family={Tufa},
+         familyi={T\bibinitperiod},
+         given={Tolcha},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=WCS}{%
+         family={Wortmann},
+         familyi={W\bibinitperiod},
+         given={Charles\bibnamedelima S},
+         giveni={C\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LFM+1}
+    \strng{fullhash}{LFMMTTTWCS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2019}
+    \field{labeldatesource}{}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \verb{doi}
+    \verb 10.1002/agj2.20020
+    \endverb
+    \field{title}{{Soil Fertility \& Crop Nutrition Barley and wheat nutrient
+  responses for Shewa, Ethiopia}}
+    \field{journaltitle}{Agronomy Journal}
+    \field{year}{2019}
+  \endentry
+
+  \entry{lu2014gwmodel}{article}{}
+    \name{author}{4}{}{%
+      {{hash=LB}{%
+         family={Lu},
+         familyi={L\bibinitperiod},
+         given={Binbin},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=HP}{%
+         family={Harris},
+         familyi={H\bibinitperiod},
+         given={Paul},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=CM}{%
+         family={Charlton},
+         familyi={C\bibinitperiod},
+         given={Martin},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=BC}{%
+         family={Brunsdon},
+         familyi={B\bibinitperiod},
+         given={Chris},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Taylor & Francis}%
+    }
+    \strng{namehash}{LB+1}
+    \strng{fullhash}{LBHPCMBC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2014}
+    \field{labeldatesource}{}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \verb{doi}
+    \verb 10.1080/10095020.2014.917453
+    \endverb
+    \verb{eprint}
+    \verb https://doi.org/10.1080/10095020.2014.917453
+    \endverb
+    \field{number}{2}
+    \field{pages}{85\bibrangedash 101}
+    \field{title}{The GWmodel R package: further topics for exploring spatial
+  heterogeneity using geographically weighted models}
+    \verb{url}
+    \verb https://doi.org/10.1080/10095020.2014.917453
+    \endverb
+    \field{volume}{17}
+    \field{journaltitle}{Geo-spatial Information Science}
+    \field{year}{2014}
+  \endentry
+
+  \entry{Marchant2019Establishinga}{article}{}
+    \name{author}{8}{}{%
+      {{hash=MB}{%
+         family={Marchant},
+         familyi={M\bibinitperiod},
+         given={Ben},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=RS}{%
+         family={Rudolph},
+         familyi={R\bibinitperiod},
+         given={Sebastian},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=RS}{%
+         family={Roques},
+         familyi={R\bibinitperiod},
+         given={Susie},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=KD}{%
+         family={Kindred},
+         familyi={K\bibinitperiod},
+         given={Daniel},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=GV}{%
+         family={Gillingham},
+         familyi={G\bibinitperiod},
+         given={Vincent},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=WS}{%
+         family={Welham},
+         familyi={W\bibinitperiod},
+         given={Sue},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=CC}{%
+         family={Coleman},
+         familyi={C\bibinitperiod},
+         given={Colin},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=SR}{%
+         family={{Sylvester-Bradley}},
+         familyi={S\bibinitperiod},
+         given={Roger},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {en}%
+    }
+    \keyw{Field-scale trials,Geostatistics,NDVI,Yield monitor}
+    \strng{namehash}{MB+1}
+    \strng{fullhash}{MBRSRSKDGVWSCCSR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2019}
+    \field{labeldatesource}{}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \verb{doi}
+    \verb 10.1016/j.fcr.2018.10.006
+    \endverb
+    \field{issn}{0378-4290}
+    \field{pages}{31\bibrangedash 45}
+    \field{title}{Establishing the Precision and Robustness of Farmers' Crop
+  Experiments}
+    \field{volume}{230}
+    \field{journaltitle}{Field Crops Research}
+    \field{month}{01}
+    \field{year}{2019}
+  \endentry
+
+  \entry{Marschner2011}{book}{}
+    \name{author}{1}{}{%
+      {{hash=MH}{%
+         family={Marschner},
+         familyi={M\bibinitperiod},
+         given={Horst},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {San Diego: Elsevier Science \& Technology}%
+    }
+    \keyw{Nutrition ,Plants}
+    \strng{namehash}{MH1}
+    \strng{fullhash}{MH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2011}
+    \field{labeldatesource}{}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \verb{doi}
+    \verb 10.1016/C2009-0-63043-9
+    \endverb
+    \field{title}{{Marschner's Mineral Nutrition of Higher Plants}}
+    \list{location}{1}{%
+      {San Diego}%
+    }
+    \field{year}{2011}
+  \endentry
+
+  \entry{McElreath2015Statistical}{book}{}
+    \name{author}{1}{}{%
+      {{hash=MR}{%
+         family={McElreath},
+         familyi={M\bibinitperiod},
+         given={Richard},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {English}%
+    }
+    \list{publisher}{1}{%
+      {{CRC Press LLC}}%
+    }
+    \strng{namehash}{MR1}
+    \strng{fullhash}{MR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2015}
+    \field{labeldatesource}{}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{edition}{First}
+    \field{series}{Chapman and {{Hall}}/{{CRC Texts}} in {{Statistical Science
+  Ser}}.}
+    \field{title}{Statistical Rethinking: {{A}} Bayesian Course with Examples
+  in {{R}} and Stan}
+    \field{volume}{122}
+    \field{month}{12}
+    \field{year}{2015}
+  \endentry
+
+  \entry{Paez2002General}{article}{}
+    \name{author}{3}{}{%
+      {{hash=PA}{%
+         family={P{\'a}ez},
+         familyi={P\bibinitperiod},
+         given={Antonio},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=UT}{%
+         family={Uchida},
+         familyi={U\bibinitperiod},
+         given={Takashi},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=MK}{%
+         family={Miyamoto},
+         familyi={M\bibinitperiod},
+         given={Kazuaki},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {{SAGE Publications Ltd}}%
+    }
+    \strng{namehash}{PA+1}
+    \strng{fullhash}{PAUTMK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{labelyear}{2002}
+    \field{labeldatesource}{}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \verb{doi}
+    \verb 10.1068/a34110
+    \endverb
+    \field{issn}{0308-518X}
+    \field{number}{4}
+    \field{pages}{733\bibrangedash 754}
+    \field{shorttitle}{A {{General Framework}} for {{Estimation}} and
+  {{Inference}} of {{Geographically Weighted Regression Models}}}
+    \field{title}{A {{General Framework}} for {{Estimation}} and {{Inference}}
+  of {{Geographically Weighted Regression Models}}: 1. {{Location}}-{{Specific
+  Kernel Bandwidths}} and a {{Test}} for {{Locational Heterogeneity}}}
+    \field{volume}{34}
+    \field{journaltitle}{Environment and Planning A: Economy and Space}
+    \field{month}{04}
+    \field{year}{2002}
+  \endentry
+
+  \entry{Pandit2019Comparative}{article}{}
+    \name{author}{2}{}{%
+      {{hash=PRK}{%
+         family={Pandit},
+         familyi={P\bibinitperiod},
+         given={Ravi\bibnamedelima Kumar},
+         giveni={R\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=ID}{%
+         family={Infield},
+         familyi={I\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {en}%
+    }
+    \keyw{Condition monitoring,Covariance functions,Gaussian process,Power
+  curve}
+    \strng{namehash}{PRKID1}
+    \strng{fullhash}{PRKID1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2019}
+    \field{labeldatesource}{}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \verb{doi}
+    \verb 10.1016/j.renene.2019.03.047
+    \endverb
+    \field{issn}{0960-1481}
+    \field{pages}{190\bibrangedash 202}
+    \field{title}{Comparative Analysis of {{Gaussian Process}} Power Curve
+  Models Based on Different Stationary Covariance Functions for the Purpose of
+  Improving Model Accuracy}
+    \field{volume}{140}
+    \field{journaltitle}{Renewable Energy}
+    \field{month}{09}
+    \field{year}{2019}
+  \endentry
+
+  \entry{Petersen1994Agricultural}{book}{}
+    \name{author}{1}{}{%
+      {{hash=PRG}{%
+         family={Petersen},
+         familyi={P\bibinitperiod},
+         given={Roger\bibnamedelima G},
+         giveni={R\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {en}%
+    }
+    \list{publisher}{1}{%
+      {{CRC Press}}%
+    }
+    \strng{namehash}{PRG1}
+    \strng{fullhash}{PRG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1994}
+    \field{labeldatesource}{}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{edition}{1st}
+    \field{isbn}{978-0-429-07849-1}
+    \field{title}{Agricultural {{Field Experiments}}: {{Design}} and
+  {{Analysis}}}
+    \list{location}{1}{%
+      {{Boca Raton}}%
+    }
+    \field{annotation}{%
+    ZSCC: 0000442%
+    }
+    \field{year}{1994}
+  \endentry
+
+  \entry{Piepho2018Tutorial}{article}{}
+    \name{author}{2}{}{%
+      {{hash=PHP}{%
+         family={Piepho},
+         familyi={P\bibinitperiod},
+         given={H.\bibnamedelima P.},
+         giveni={H\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=ERN}{%
+         family={Edmondson},
+         familyi={E\bibinitperiod},
+         given={R.\bibnamedelima N.},
+         giveni={R\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+    }
+    \keyw{factorial analysis, linear mixed models, polynomial regression, R,
+  repeated-measures analysis, response surface models, SAS, split-plot
+  analysis}
+    \strng{namehash}{PHPERN1}
+    \strng{fullhash}{PHPERN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2018}
+    \field{labeldatesource}{}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \verb{doi}
+    \verb https://doi.org/10.1111/jac.12267
+    \endverb
+    \verb{eprint}
+    \verb https://onlinelibrary.wiley.com/doi/pdf/10.1111/jac.12267
+    \endverb
+    \field{number}{5}
+    \field{pages}{429\bibrangedash 455}
+    \field{title}{A tutorial on the statistical analysis of factorial
+  experiments with qualitative and quantitative treatment factor levels}
+    \verb{url}
+    \verb https://onlinelibrary.wiley.com/doi/abs/10.1111/jac.12267
+    \endverb
+    \field{volume}{204}
+    \field{journaltitle}{Journal of Agronomy and Crop Science}
+    \field{year}{2018}
+  \endentry
+
+  \entry{Piepho2013Why}{article}{}
+    \name{author}{3}{}{%
+      {{hash=PHP}{%
+         family={Piepho},
+         familyi={P\bibinitperiod},
+         given={H.\bibnamedelima P.},
+         giveni={H\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=MJ}{%
+         family={M{\"o}hring},
+         familyi={M\bibinitperiod},
+         given={J.},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=WER}{%
+         family={Williams},
+         familyi={W\bibinitperiod},
+         given={E.\bibnamedelima R.},
+         giveni={E\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \keyw{experimental design,Experimental design,field trial,Field
+  trial,linear model,Linear
+  model,randomization,Randomization,statistics,Statistics,uniformity
+  trial,Uniformity trial}
+    \strng{namehash}{PHP+1}
+    \strng{fullhash}{PHPMJWER1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2013}
+    \field{labeldatesource}{}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \verb{doi}
+    \verb 10.1111/jac.12026
+    \endverb
+    \field{issn}{09312250}
+    \field{number}{5}
+    \field{pages}{374\bibrangedash 383}
+    \field{title}{Why Randomize Agricultural Experiments?}
+    \field{volume}{199}
+    \field{journaltitle}{Journal of Agronomy and Crop Science}
+    \field{year}{2013}
+  \endentry
+
+  \entry{Pringle2004FieldScale}{article}{}
+    \name{author}{3}{}{%
+      {{hash=PMJ}{%
+         family={Pringle},
+         familyi={P\bibinitperiod},
+         given={M.\bibnamedelima J.},
+         giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=CSE}{%
+         family={Cook},
+         familyi={C\bibinitperiod},
+         given={S.\bibnamedelima E.},
+         giveni={S\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=MAB}{%
+         family={McBratney},
+         familyi={M\bibinitperiod},
+         given={A.\bibnamedelima B.},
+         giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {en}%
+    }
+    \strng{namehash}{PMJ+1}
+    \strng{fullhash}{PMJCSEMAB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{labelyear}{2004}
+    \field{labeldatesource}{}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \verb{doi}
+    \verb 10.1007/s11119-004-6346-1
+    \endverb
+    \field{issn}{1573-1618}
+    \field{number}{6}
+    \field{pages}{617\bibrangedash 624}
+    \field{shorttitle}{Field-{{Scale Experiments}} for {{Site}}-{{Specific Crop
+  Management}}. {{Part I}}}
+    \field{title}{Field-{{Scale Experiments}} for {{Site}}-{{Specific Crop
+  Management}}. {{Part I}}: {{Design Considerations}}}
+    \field{volume}{5}
+    \field{journaltitle}{Precision Agriculture}
+    \field{month}{12}
+    \field{year}{2004}
+  \endentry
+
+  \entry{Rakshit2020Novel}{article}{}
+    \name{author}{8}{}{%
+      {{hash=RS}{%
+         family={Rakshit},
+         familyi={R\bibinitperiod},
+         given={Suman},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=BA}{%
+         family={Baddeley},
+         familyi={B\bibinitperiod},
+         given={Adrian},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=SK}{%
+         family={Stefanova},
+         familyi={S\bibinitperiod},
+         given={Katia},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=RK}{%
+         family={Reeves},
+         familyi={R\bibinitperiod},
+         given={Karyn},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=CK}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Kefei},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=CZ}{%
+         family={Cao},
+         familyi={C\bibinitperiod},
+         given={Zhanglong},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=EF}{%
+         family={Evans},
+         familyi={E\bibinitperiod},
+         given={Fiona},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=GM}{%
+         family={Gibberd},
+         familyi={G\bibinitperiod},
+         given={Mark},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {{Elsevier}}%
+    }
+    \strng{namehash}{RS+1}
+    \strng{fullhash}{RSBASKRKCKCZEFGM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2020}
+    \field{labeldatesource}{}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \verb{doi}
+    \verb 10/gg2vv7
+    \endverb
+    \field{issn}{0378-4290}
+    \field{number}{October 2019}
+    \field{pages}{107783}
+    \field{title}{Novel Approach to the Analysis of Spatially-Varying Treatment
+  Effects in on-Farm Experiments}
+    \field{volume}{255}
+    \field{journaltitle}{Field Crops Research}
+    \field{year}{2020}
+  \endentry
+
+  \entry{Selle2019Flexible}{article}{}
+    \name{author}{4}{}{%
+      {{hash=SML}{%
+         family={Selle},
+         familyi={S\bibinitperiod},
+         given={Maria\bibnamedelima Lie},
+         giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=SI}{%
+         family={Steinsland},
+         familyi={S\bibinitperiod},
+         given={Ingelin},
+         giveni={I\bibinitperiod},
+      }}%
+      {{hash=HJM}{%
+         family={Hickey},
+         familyi={H\bibinitperiod},
+         given={John\bibnamedelima M.},
+         giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=GG}{%
+         family={Gorjanc},
+         familyi={G\bibinitperiod},
+         given={Gregor},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {{Springer Berlin Heidelberg}}%
+    }
+    \strng{namehash}{SML+1}
+    \strng{fullhash}{SMLSIHJMGG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2019}
+    \field{labeldatesource}{}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \verb{doi}
+    \verb 10.1007/s00122-019-03424-y
+    \endverb
+    \field{issn}{14322242}
+    \field{number}{12}
+    \field{pages}{3277\bibrangedash 3293}
+    \field{title}{Flexible Modelling of Spatial Variation in Agricultural Field
+  Trials with the {{R}} Package {{INLA}}}
+    \field{volume}{132}
+    \field{journaltitle}{Theoretical and Applied Genetics}
+    \field{year}{2019}
+  \endentry
+
+  \entry{Verdooren2020History}{article}{}
+    \name{author}{1}{}{%
+      {{hash=VLR}{%
+         family={Verdooren},
+         familyi={V\bibinitperiod},
+         given={L.\bibnamedelima Rob},
+         giveni={L\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {en}%
+    }
+    \strng{namehash}{VLR1}
+    \strng{fullhash}{VLR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2020}
+    \field{labeldatesource}{}
+    \field{sortinit}{V}
+    \field{sortinithash}{V}
+    \verb{doi}
+    \verb 10.1007/s13253-020-00394-3
+    \endverb
+    \field{issn}{1085-7117, 1537-2693}
+    \field{number}{4}
+    \field{pages}{457\bibrangedash 486}
+    \field{title}{History of the {{Statistical Design}} of {{Agricultural
+  Experiments}}}
+    \field{volume}{25}
+    \field{journaltitle}{Journal of Agricultural, Biological and Environmental
+  Statistics}
+    \field{month}{12}
+    \field{year}{2020}
+  \endentry
+
+  \entry{White2008Agridat}{article}{}
+    \name{author}{2}{}{%
+      {{hash=WJW}{%
+         family={White},
+         familyi={W\bibinitperiod},
+         given={Jeffrey\bibnamedelima W.},
+         giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+      {{hash=vEFK}{%
+         prefix={van},
+         prefixi={v\bibinitperiod},
+         family={Evert},
+         familyi={E\bibinitperiod},
+         given={Frits\bibnamedelima K.},
+         giveni={F\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WJWEFKv1}
+    \strng{fullhash}{WJWEFKv1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2008}
+    \field{labeldatesource}{}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \verb{doi}
+    \verb https://doi.org/10.2134/agronj2008.0080F
+    \endverb
+    \verb{eprint}
+    \verb https://acsess.onlinelibrary.wiley.com/doi/pdf/10.2134/agronj2008.008
+    \verb 0F
+    \endverb
+    \field{number}{5}
+    \field{pages}{1396\bibrangedash 1400}
+    \field{title}{Publishing Agronomic Data}
+    \verb{url}
+    \verb https://acsess.onlinelibrary.wiley.com/doi/abs/10.2134/agronj2008.008
+    \verb 0F
+    \endverb
+    \field{volume}{100}
+    \field{journaltitle}{Agronomy Journal}
+    \field{year}{2008}
+  \endentry
+
+  \entry{Zimmerman1991Randoma}{article}{}
+    \name{author}{2}{}{%
+      {{hash=ZDL}{%
+         family={Zimmerman},
+         familyi={Z\bibinitperiod},
+         given={Dale\bibnamedelima L.},
+         giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=HDA}{%
+         family={Harville},
+         familyi={H\bibinitperiod},
+         given={David\bibnamedelima A.},
+         giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {{[Wiley, International Biometric Society]}}%
+    }
+    \strng{namehash}{ZDLHDA1}
+    \strng{fullhash}{ZDLHDA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1991}
+    \field{labeldatesource}{}
+    \field{sortinit}{Z}
+    \field{sortinithash}{Z}
+    \verb{doi}
+    \verb 10.2307/2532508
+    \endverb
+    \field{issn}{0006-341X}
+    \field{number}{1}
+    \field{pages}{223\bibrangedash 239}
+    \field{title}{A {{Random Field Approach}} to the {{Analysis}} of
+  {{Field}}-{{Plot Experiments}} and {{Other Spatial Experiments}}}
+    \field{volume}{47}
+    \field{journaltitle}{Biometrics}
+    \field{year}{1991}
+  \endentry
+\enddatalist
+\endinput

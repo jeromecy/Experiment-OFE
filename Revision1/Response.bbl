@@ -1,0 +1,328 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nyt/global//global/global}
+  \entry{Cao2022Bayesian}{article}{}
+    \name{author}{4}{}{%
+      {{hash=CZ}{%
+         family={Cao},
+         familyi={C\bibinitperiod},
+         given={Zhanglong},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=SK}{%
+         family={Stefanova},
+         familyi={S\bibinitperiod},
+         given={Katia},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=GM}{%
+         family={Gibberd},
+         familyi={G\bibinitperiod},
+         given={Mark},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=RS}{%
+         family={Rakshit},
+         familyi={R\bibinitperiod},
+         given={Suman},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CZ+1}
+    \strng{fullhash}{CZSKGMRS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2022}
+    \field{labeldatesource}{}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \verb{doi}
+    \verb https://doi.org/10.1016/j.fcr.2022.108477
+    \endverb
+    \field{issn}{0378-4290}
+    \field{pages}{108477}
+    \field{title}{Bayesian inference of spatially correlated random parameters
+  for on-farm experiment}
+    \verb{url}
+    \verb https://www.sciencedirect.com/science/article/pii/S037842902200048X
+    \endverb
+    \field{volume}{281}
+    \field{journaltitle}{Field Crops Research}
+    \field{year}{2022}
+  \endentry
+
+  \entry{Gollini2015GWmodel}{article}{}
+    \name{author}{5}{}{%
+      {{hash=GI}{%
+         family={Gollini},
+         familyi={G\bibinitperiod},
+         given={Isabella},
+         giveni={I\bibinitperiod},
+      }}%
+      {{hash=LB}{%
+         family={Lu},
+         familyi={L\bibinitperiod},
+         given={Binbin},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=CM}{%
+         family={Charlton},
+         familyi={C\bibinitperiod},
+         given={Martin},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=BC}{%
+         family={Brunsdon},
+         familyi={B\bibinitperiod},
+         given={Christopher},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=HP}{%
+         family={Harris},
+         familyi={H\bibinitperiod},
+         given={Paul},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {en}%
+    }
+    \strng{namehash}{GI+1}
+    \strng{fullhash}{GILBCMBCHP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{labelyear}{2015}
+    \field{labeldatesource}{}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \verb{doi}
+    \verb 10.18637/jss.v063.i17
+    \endverb
+    \field{issn}{1548-7660}
+    \field{number}{1}
+    \field{pages}{1\bibrangedash 50}
+    \field{shorttitle}{{{GWmodel}}}
+    \field{title}{{{GWmodel}}: {{An R Package}} for {{Exploring Spatial
+  Heterogeneity Using Geographically Weighted Models}}}
+    \field{volume}{63}
+    \field{journaltitle}{Journal of Statistical Software}
+    \field{month}{02}
+    \field{year}{2015}
+  \endentry
+
+  \entry{lu2014gwmodel}{article}{}
+    \name{author}{4}{}{%
+      {{hash=LB}{%
+         family={Lu},
+         familyi={L\bibinitperiod},
+         given={Binbin},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=HP}{%
+         family={Harris},
+         familyi={H\bibinitperiod},
+         given={Paul},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=CM}{%
+         family={Charlton},
+         familyi={C\bibinitperiod},
+         given={Martin},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=BC}{%
+         family={Brunsdon},
+         familyi={B\bibinitperiod},
+         given={Chris},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Taylor & Francis}%
+    }
+    \strng{namehash}{LB+1}
+    \strng{fullhash}{LBHPCMBC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2014}
+    \field{labeldatesource}{}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \verb{doi}
+    \verb 10.1080/10095020.2014.917453
+    \endverb
+    \verb{eprint}
+    \verb https://doi.org/10.1080/10095020.2014.917453
+    \endverb
+    \field{number}{2}
+    \field{pages}{85\bibrangedash 101}
+    \field{title}{The GWmodel R package: further topics for exploring spatial
+  heterogeneity using geographically weighted models}
+    \verb{url}
+    \verb https://doi.org/10.1080/10095020.2014.917453
+    \endverb
+    \field{volume}{17}
+    \field{journaltitle}{Geo-spatial Information Science}
+    \field{year}{2014}
+  \endentry
+
+  \entry{Rakshit2020Novel}{article}{}
+    \name{author}{8}{}{%
+      {{hash=RS}{%
+         family={Rakshit},
+         familyi={R\bibinitperiod},
+         given={Suman},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=BA}{%
+         family={Baddeley},
+         familyi={B\bibinitperiod},
+         given={Adrian},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=SK}{%
+         family={Stefanova},
+         familyi={S\bibinitperiod},
+         given={Katia},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=RK}{%
+         family={Reeves},
+         familyi={R\bibinitperiod},
+         given={Karyn},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=CK}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Kefei},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=CZ}{%
+         family={Cao},
+         familyi={C\bibinitperiod},
+         given={Zhanglong},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=EF}{%
+         family={Evans},
+         familyi={E\bibinitperiod},
+         given={Fiona},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=GM}{%
+         family={Gibberd},
+         familyi={G\bibinitperiod},
+         given={Mark},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {{Elsevier}}%
+    }
+    \strng{namehash}{RS+1}
+    \strng{fullhash}{RSBASKRKCKCZEFGM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2020}
+    \field{labeldatesource}{}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \verb{doi}
+    \verb 10/gg2vv7
+    \endverb
+    \field{issn}{0378-4290}
+    \field{number}{October 2019}
+    \field{pages}{107783}
+    \field{title}{Novel Approach to the Analysis of Spatially-Varying Treatment
+  Effects in on-Farm Experiments}
+    \field{volume}{255}
+    \field{journaltitle}{Field Crops Research}
+    \field{year}{2020}
+  \endentry
+
+  \entry{Stefanova2023Statistical}{article}{}
+    \name{author}{7}{}{%
+      {{hash=SKT}{%
+         family={Stefanova},
+         familyi={S\bibinitperiod},
+         given={Katia\bibnamedelima T.},
+         giveni={K\bibinitperiod\bibinitdelim T\bibinitperiod},
+      }}%
+      {{hash=BJ}{%
+         family={Brown},
+         familyi={B\bibinitperiod},
+         given={Jordan},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=GA}{%
+         family={Grose},
+         familyi={G\bibinitperiod},
+         given={Andrew},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=CZ}{%
+         family={Cao},
+         familyi={C\bibinitperiod},
+         given={Zhanglong},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=CK}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Kefei},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=GM}{%
+         family={Gibberd},
+         familyi={G\bibinitperiod},
+         given={Mark},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=RS}{%
+         family={Rakshit},
+         familyi={R\bibinitperiod},
+         given={Suman},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SKT+1}
+    \strng{fullhash}{SKTBJGACZCKGMRS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2023}
+    \field{labeldatesource}{}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \verb{doi}
+    \verb https://doi.org/10.1016/j.fcr.2023.108945
+    \endverb
+    \field{issn}{0378-4290}
+    \field{pages}{108945}
+    \field{title}{Statistical analysis of comparative experiments based on
+  large strip on-farm trials}
+    \verb{url}
+    \verb https://www.sciencedirect.com/science/article/pii/S0378429023001387
+    \endverb
+    \field{volume}{297}
+    \field{journaltitle}{Field Crops Research}
+    \field{year}{2023}
+  \endentry
+\enddatalist
+\endinput
