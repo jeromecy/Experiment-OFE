@@ -35,6 +35,7 @@ These findings offer practical recommendations for designing large strip trials,
 
 If you use this repository in your research, please cite the paper as follows:
 
+```bibtex
 @article{cao2024optimal,
   title={Optimal design for on-farm strip trials—systematic or randomised?},
   author={Cao, Zhanglong and Brown, Jordan and Gibberd, Mark and Easton, Julia and Rakshit, Suman},
@@ -42,5 +43,7 @@ If you use this repository in your research, please cite the paper as follows:
   volume={318},
   pages={109594},
   year={2024},
+  doi ={https://doi.org/10.1016/j.fcr.2024.109594},
   publisher={Elsevier}
 }
+```
